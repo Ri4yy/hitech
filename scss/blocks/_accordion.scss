@@ -1,0 +1,108 @@
+.accordion {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__bottom {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: all .3s;
+
+        &.open {
+            margin-top: 20px;
+            grid-template-rows: 1fr;
+            @media(max-width: $breakpoint768) {
+                margin-top: 12px;
+            }
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 130%;
+        color: $main-text;
+        pointer-events: none;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 19px;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        min-height: 0;
+        @media(max-width: $breakpoint768) {
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+.accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__item {
+
+    }
+    &__btn {
+        display: flex;
+        flex-shrink: 0;
+        pointer-events: none;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        @media(max-width: $breakpoint768) {
+            width: 24px;
+            height: 24px;
+        }
+
+        &.open {
+            background-color: $main-color;
+
+            & span {
+                &:nth-of-type(2) {
+                    opacity: 0;
+                }
+            }
+        }
+
+        & span {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 50px;
+
+            &:nth-of-type(1) {
+                width: 20px;
+                height: 2px;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                @media(max-width: $breakpoint768) {
+                    width: 14px;
+                }
+            }
+            &:nth-of-type(2) {
+                width: 2px;
+                height: 20px;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                @media(max-width: $breakpoint768) {
+                    height: 14px;
+                }
+            }
+        }
+    }
+}

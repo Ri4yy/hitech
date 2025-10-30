@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Аккордеон | Пример</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion">
+            <ul class="accordion-list">
+                <li class="accordion-list__item">
+                    <div class="accordion__top">
+                        <p class="accordion__title">Какова процедура оценки моего автомобиля?</p>
+                        <button class="accordion-list__btn">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="accordion__bottom">
+                        <p class="accordion__text">Наша компания предлагает точную оценку стоимости вашего
+                            автомобиля по телефону. Просто свяжитесь с нами, и наши эксперты-оценщики
+                            предоставят вам актуальную информацию. В более чем 90% случаев цена, озвученная
+                            по телефону, совпадает с ценой, предложенной после осмотра автомобиля.</p>
+                    </div>
+                </li>
+                <li class="accordion-list__item">
+                    <div class="accordion__top">
+                        <p class="accordion__title">Есть ли возможность осмотра автомобиля на моей территории?
+                        </p>
+                        <button class="accordion-list__btn">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="accordion__bottom">
+                        <p class="accordion__text">Да, мы готовы приехать к вам для осмотра вашего автомобиля в удобное
+                            для вас время и место. Просто дайте нам знать, когда вам будет удобно, и наши специалисты
+                            приедут к вам.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../assets/libs/jquery.min.js"></script>
+
+    <script>
+        $('.accordion__top').click((e) => {
+            $(e.target).closest('.accordion-list__item').find('.accordion__bottom').toggleClass('open')
+            $(e.target).find('.accordion-list__btn').toggleClass('open')
+        })
+    </script>
+</body>
+
+</html>

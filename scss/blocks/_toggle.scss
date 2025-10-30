@@ -1,0 +1,46 @@
+.toggle {
+    display: inline-block;
+
+    & input[type=radio] {
+        display: none;
+    }
+    & input[type=radio]:checked + label {
+        border-color: $main-color;
+    }
+    & input[type=radio]:disabled + label {
+        cursor: not-allowed;
+    }
+
+    & label {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: $main-text;
+        border: 1px solid rgb(232, 232, 232);
+        border-radius: 12px;
+        cursor: pointer;
+        user-select: none; 
+        transition: border-color .3s;
+
+        &:hover {
+            border-color: $main-color;
+        }
+    }
+
+
+    &--1 {
+        & label {
+            display: flex;
+            padding: 11px;
+
+            @media(max-width: $breakpoint480) {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+        }
+    }
+
+}
+
+

@@ -1,0 +1,11 @@
+.tabs__content {
+    display: none;
+
+    &.active {
+        display: block; 
+    }
+}
+
+.active-tab {
+    color: $main-color;
+}

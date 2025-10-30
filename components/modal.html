@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Модальное окно | Пример</title>
+</head>
+<body>
+
+    <button class="open-modal">Открыть модальное окон</button>
+
+    <div class="modal modal--form">
+        <div class="modal__body modal__body--form">
+            <div class="modal__wrapper modal__wrapper--form">
+                <button class="close-modal">
+                    <img src="../assets/img/icons/close.svg" alt="">
+                </button>
+                <div class="modal__info">
+                    <div class="modal__header">
+                        <h2 class="modal__title">Получите возможность участвовать в проекте!</h2>
+                        <p class="modal__text">Оставьте ваши контакты и получите персональный инвестиционный план</p>
+                    </div>
+                    <form class="form modal-form">
+                        <input type="text" class="input input--green modal-form__input" name="name" placeholder="Ваше имя">
+                        <input type="tel" class="input input--green modal-form__input" name="phone" placeholder="Номер телефона">
+                        <input type="email" class="input input--green modal-form__input" name="phone" placeholder="Email">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Я даю свое согласие на обработку персональных данных</span>
+                        </label>
+                        <button class="btn btn--green btn-hover btn-hover--green modal-form__btn">Отправить запрос</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/libs/jquery.min.js"></script>
+
+    <script>
+        // Модальное окно
+        function showModal(btnOpen, modalBody) {
+            btnOpen.click(function () {
+                modalBody.addClass('active');
+                $('html').addClass('no-scroll');
+                return false;
+            });
+
+            $(document).keydown(function (e) {
+                if (e.keyCode === 27) {
+                    e.stopPropagation();
+                    modalBody.removeClass('active');
+                    $('html').removeClass('no-scroll');
+                }
+            });
+
+            modalBody.click(function (e) {
+                if ($(e.target).closest('.modal__wrapper').length == 0) {
+                    $(this).removeClass('active');
+                    $('html').removeClass('no-scroll');
+                }
+            });
+
+            $('.close-modal').click((e) => {
+                modalBody.removeClass('active');
+                $('html').removeClass('no-scroll');
+            })
+        }
+
+        showModal($('.open-modal'), $('.modal--form'));
+    </script>
+</body>
+</html>

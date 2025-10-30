@@ -1,0 +1,31 @@
+.menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @media(max-width: $breakpoint1280) {
+        gap: 16px;
+    }
+    @media(max-width: $breakpoint1024) {
+        gap: 6px;
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__link {
+        display: block;
+        font-weight: 500;
+        font-size: 18px;
+        color: $main-text;
+
+        @media(max-width: $breakpoint1024) {
+            font-size: 16px;
+        }
+
+        &--active {
+            color: $main-color;
+        }
+    }
+}

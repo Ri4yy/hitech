@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Табы | Пример</title>
+</head>
+<body>
+
+    <div class="tabs">
+        <ul class="tabs__list">
+            <li class="active-tab">Наша лаборатория</li>
+            <li>Наши эксперты</li>
+        </ul>
+        <ul class="tabs__wrapper">
+            <li class="tabs__content active">
+                1
+            </li>
+            <li class="tabs__content">
+                2
+            </li>
+        </ul>
+    </div>
+
+    <script src="../assets/libs/jquery.min.js"></script>
+
+    <script>
+        function tabs(wrapperMain, wrapperTab, wrapperContent, activeTab, activeContent) {
+            $(wrapperTab).on('click', 'li:not('+activeTab+')', function () {
+                $(this)
+                    .addClass(activeTab).siblings().removeClass(activeTab)
+                    .closest(wrapperMain).find(wrapperContent).removeClass(activeContent).eq($(this).index()).addClass(activeContent);
+            });
+        }
+        tabs('.tabs', '.tabs__list', '.tabs__content', 'active-tab', 'active');
+    </script>
+</body>
+</html>

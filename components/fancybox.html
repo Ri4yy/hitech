@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/libs/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Fancybox | Пример</title>
+</head>
+
+<body>
+    <!-- Документация 
+         https://www.luciadallas.com/js/fancybox3/docs/ -->
+
+    <a href="image_1.jpg" data-fancybox="gallery" data-caption="Caption #1">
+        <img src="thumbnail_1.jpg" alt="" />
+    </a>
+
+    <a data-fancybox href="https://vimeo.com/191947042">
+        Vimeo video
+    </a>
+
+    <script src="../assets/libs/jquery.min.js"></script>
+    <script src="../assets/libs/jquery.fancybox.min.js"></script>
+
+    <script>
+        // Gallery
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            compact: false,
+            contentClick: "iterateZoom",
+            Images: {
+                Panzoom: {
+                    maxScale: 2,
+                },
+            },
+            wheel: "slide",
+            Toolbar: {
+                display: {
+                    left: [
+                        "infobar",
+                    ],
+                    middle: [],
+                    right: [
+                        "iterateZoom",
+                        "close",
+                    ],
+                }
+            }
+        });
+
+        // Video modal
+        Fancybox.bind('[data-fancybox="video"]', {
+            groupAttr: false
+        })
+    </script>
+</body>
+
+</html>

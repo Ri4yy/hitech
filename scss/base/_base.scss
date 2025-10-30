@@ -1,0 +1,62 @@
+@import url("../assets/fonts/stylesheet.css");
+
+html,
+body {
+    font-family: '';
+    scroll-behavior: smooth;
+}
+
+// Заголовки
+h1 {
+    color: $main-color;
+}
+h2 {
+    color: $main-color;
+}
+h3 {
+    color: $main-text;
+}
+
+// База
+.container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+
+    &__inner {
+        margin-top: 40px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 24px;
+        }
+    }
+
+    @media(max-width: $container-width) {
+        padding: 0 $padding-md;
+    }
+    @media(max-width: $breakpoint768) {
+        padding: 0 $padding-sm;
+    }
+}
+.section {
+    margin-top: $section-top;
+
+    @media(max-width: $breakpoint768) {
+        margin-top: 90px;
+    }
+}
+
+.left-padding {
+    padding-left: calc((100vw - $section-top) / 2);
+
+    @media(max-width: $container-width) {
+        padding-left: $padding-md;
+    }
+    @media(max-width: $breakpoint768) {
+        padding-left: $padding-sm;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
