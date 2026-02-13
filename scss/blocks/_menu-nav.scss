@@ -1,13 +1,10 @@
 .menu-nav {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 24px;
 
-    @media(max-width: $breakpoint1280) {
-        gap: 16px;
-    }
     @media(max-width: $breakpoint1024) {
-        gap: 6px;
+        gap: 18px;
     }
 
     &__item {
@@ -16,16 +13,22 @@
 
     &__link {
         display: block;
-        font-weight: 500;
+        
+        font-family: var(--font-family-ruberoid);
+        font-weight: 600;
         font-size: 18px;
-        color: $main-text;
+        line-height: 100%;
+        color: #4d4d4d;
 
         @media(max-width: $breakpoint1024) {
             font-size: 16px;
         }
 
         &--active {
-            color: $main-color;
+            background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
-}
+} 

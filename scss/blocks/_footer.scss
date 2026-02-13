@@ -1,0 +1,215 @@
+.footer {
+    padding: 46px 0;
+
+    @media(max-width: $breakpoint992) {
+        padding: 36px 0;
+    }
+    @media(max-width: $breakpoint600) {
+        padding: 28px 0;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        border-radius: 16px;
+        padding: 32px 30px;
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.25);
+        background: #ededed;
+
+        position: relative;
+        z-index: 2;
+        
+        @media(max-width: $breakpoint992) {
+            padding: 28px 24px;
+            gap: 28px;
+        }
+        @media(max-width: $breakpoint600) {
+            padding: 25px 20px;
+        }
+
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        &-row {
+            display: grid;
+            grid-template-columns: 250px 225px auto;
+            gap: 28px;
+
+            @media(max-width: $breakpoint992) {
+                grid-template-rows: auto auto;
+                row-gap: 20px;
+                column-gap: 14px;
+            }
+            @media(max-width: $breakpoint600) {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        &-col {
+            &-title {
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 147%;
+                color: var(--dark-gray);
+            }
+            &-content {
+                margin-top: 32px;
+
+                @media(max-width: $breakpoint600) {
+                    margin-top: 14px;
+                }
+            }
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                @media(max-width: $breakpoint600) {
+                    gap: 10px;
+                }
+            }
+            &-link {
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 133%;
+                color: rgba(77, 77, 77, 0.6);
+            }
+
+            &-info-list  {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+
+                @media(max-width: $breakpoint992) {
+                    gap: 8px;
+                }
+            }
+            &-info-item p {
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 154%;
+                text-align: right;
+                color: var(--dark-gray);
+
+                @media(max-width: $breakpoint992) {
+                    text-align: left;
+                }
+
+                & br {
+                    @media(max-width: $breakpoint992) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-text {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 140%;
+                text-align: right;
+                color: var(--dark-gray);
+
+                @media(max-width: $breakpoint992) {
+                    text-align: left;
+                }
+            }
+        }
+        &-col-center {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            @media(max-width: $breakpoint992) {
+                grid-column: 1/-1;
+                justify-content: start;
+            }
+            @media(max-width: $breakpoint600) {
+                margin-top: 26px;
+            }
+        }
+        &-col-end {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+
+            @media(max-width: $breakpoint992) {
+                grid-column: 1/-1;
+            }
+            @media(max-width: $breakpoint600) {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    &__contacts-list {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 16px;
+
+        @media(max-width: $breakpoint600) {
+            gap: 8px;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            font-family: var(--font-family-ruberoid);
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 120%;
+            text-align: right;
+
+            @media(max-width: $breakpoint600) {
+                font-size: 18px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+            @media(max-width: $breakpoint375) {
+                font-size: 14px;
+            }
+
+            &[data-phone] {
+                &::before {
+                    content: url('/assets/img/icons/i-phone-xs.svg');
+                }
+            }
+            &[data-email] {
+                &::before {
+                    content: url('/assets/img/icons/i-email-xs.svg');
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        padding: 20px 30px 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media(max-width: $breakpoint600) {
+            padding: 20px 0 0 0;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        &-copyright, &-policy {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 143%;
+            color: #999;
+        }
+    }
+}

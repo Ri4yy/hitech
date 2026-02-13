@@ -1,0 +1,115 @@
+.services-hero {
+
+    &__wrapper {
+        height: 500px;
+        position: relative;
+
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.5), 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+
+        background-image: url('/assets/img/bg/service-bg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f0edf7;
+
+        padding: 56px 24px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media(max-width: $breakpoint992) {
+            padding: 40px 24px;
+        }
+        @media(max-width: $breakpoint768) {
+            background-image: url('/assets/img/bg/service-bg-md.png');
+            padding: 36px 16px;
+        }
+        @media(max-width: $breakpoint480) {
+            background-image: url('/assets/img/bg/service-bg-xs.png');
+            padding: 28px 16px;
+        }
+    }
+
+    &__content {
+        z-index: 2;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: var(--font-family-ruberoid);
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 1;
+
+        @media(max-width: $breakpoint992) {
+            font-size: 64px;
+        }
+        @media(max-width: $breakpoint768) {
+            font-size: 48px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 36px;
+        }
+        @media(max-width: $breakpoint375) {
+            font-size: 28px;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 16px;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 140%;
+        color: var(--dark-gray);
+
+        @media(max-width: $breakpoint992) {
+            font-size: 24px;
+        }
+        @media(max-width: $breakpoint768) {
+            font-size: 20px;
+        }
+        @media(max-width: $breakpoint375) {
+            font-size: 18px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 56px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        display: inline-block;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+        background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+        border: 1px solid rgba(255, 255, 255, 0.23);
+        border-radius: 40px;
+        padding: 13px 36px;
+        white-space: nowrap;
+
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: #fff;
+        transition: opacity .3s ease;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        @media(max-width: $breakpoint992) {
+            bottom: 40px;
+        }
+        @media(max-width: $breakpoint600) {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        @media(max-width: $breakpoint480) {
+            bottom: 60px;
+        }
+    }
+}

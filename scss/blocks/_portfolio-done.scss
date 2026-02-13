@@ -1,0 +1,134 @@
+ .portfolio-done {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @media(max-width: $breakpoint768) {
+            flex-direction: column;
+            gap: 14px;
+        }
+    }
+    &__card {
+        border-radius: 20px;
+        padding: 16px 20px;
+        box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.5), 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+        background: #ededed;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        @media(max-width: $breakpoint768) {
+            width: 100% !important;
+        }
+
+        @media(max-width: $breakpoint480) {
+            padding: 16px;
+        }
+
+        // 1 ряд
+        &:nth-child(1) { 
+            width: calc(35% - 14px); 
+
+            @media(max-width: $breakpoint992) {
+                width: calc(53% - 10px);
+            }
+        }
+        &:nth-child(2) { 
+            width: calc(37% - 14px); 
+            
+            @media(max-width: $breakpoint992) {
+                width: calc(47% - 10px);
+            }
+        }
+        &:nth-child(3) { 
+            width: calc(28% - 14px); 
+
+            
+            @media(max-width: $breakpoint992) {
+                width: calc(47% - 10px);
+            }
+        }
+
+        // 2 ряд
+        &:nth-child(4) { 
+            width: calc(31% - 14px); 
+
+            
+            @media(max-width: $breakpoint992) {
+                width: calc(53% - 10px);
+            }
+        }
+        &:nth-child(5) { 
+            width: calc(30% - 14px); 
+
+            @media(max-width: $breakpoint992) {
+                width: calc(55% - 10px);
+            }
+        }
+        &:nth-child(6) { 
+            width: calc(39% - 14px); 
+
+            @media(max-width: $breakpoint992) {
+                width: calc(45% - 10px);
+            }
+        }
+
+        & h3 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 140%;
+
+            @media(max-width: $breakpoint480) {
+                font-size: 20px;
+            }
+        }
+
+        & ul {
+            margin-top: 10px;
+
+            display: flex;
+            flex-direction: column;
+
+            & li {
+                position: relative;
+                padding-left: 30px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 140%;
+
+                @media(max-width: $breakpoint480) {
+                    font-size: 16px;
+
+                    padding-left: 20px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 13px;
+                    top: 12px;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background: var(--dark-gray);
+
+                    
+                    @media(max-width: $breakpoint480) {
+                        left: 8px;
+                        top: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+

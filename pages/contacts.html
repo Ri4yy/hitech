@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="/assets/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Стили стандартных UI-контролов Яндекс.Карт v3 (зум/геолокация и т.п.) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yandex/ymaps3-default-ui-theme@latest/dist/esm/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="/" class="header__logo">
+                    <img src="/assets/img/icons/logo.svg" alt="Логотип">
+                </a>
+                <nav class="menu">
+                    <ul class="menu-nav">
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link menu-nav__link--active">Стоимость</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Кейсы</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Преимущества</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Наши цели</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__contacts">
+                    <a href="tel:" class="header__phone">+7 917 078 86 26</a>
+                </div>
+                <button class="btn-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div> 
+        <div class="header-mobile">
+            <div class="header-mobile__wrapper">
+                <div class="header-mobile__wrapper-inner">
+                    <ul class="header-mobile__menu">
+                        <li class="header-mobile__menu-item">
+                            <a href="" class="header-mobile__menu-link">Стоимость</a>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="" class="header-mobile__menu-link">Кейсы</a>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="" class="header-mobile__menu-link">Преимущества</a>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="" class="header-mobile__menu-link">Наши цели</a>
+                        </li>
+                        <li class="header-mobile__menu-item">
+                            <a href="" class="header-mobile__menu-link">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header-mobile__bottom">
+                        <p class="header-mobile__bottom-title">Свяжитесь с нами:</p>
+                        <ul class="header-mobile__contacts">
+                            <li class="header-mobile__contacts-item">
+                                <a href="" class="header-mobile__contacts-link">+7 (8352) 36-83-71</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="contacts">
+                    <div class="contacts__wrapper">
+                        <div class="contacts__info">
+                            <div class="contacts-info">
+                                <div class="contacts-info__wrapper">
+                                    <ul class="contacts-info__list">
+                                        <li class="contacts-info__item">
+                                            <span class="contacts-info__item-title">Телефон:</span>
+                                            <a href="" class="contacts-info__item-text gradient-color">+7 (917) 078-86-26</a>
+                                        </li>
+                                        <li class="contacts-info__item">
+                                            <span class="contacts-info__item-title">Email:</span>
+                                            <a href="" class="contacts-info__item-text gradient-color">htmedia.info@mail.ru</a>
+                                        </li>
+                                        <li class="contacts-info__item">
+                                            <span class="contacts-info__item-title">Адрес:</span>
+                                            <p class="contacts-info__item-text gradient-color">улица Тимофея Кривова, 4, Чебоксары, Чувашская Республика, офис 316</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="contacts-info__wrapper hidden">
+                                    <div class="contacts-info__requisites">
+                                        <ul class="contacts-info__requisites-list">
+                                            <li>
+                                                <p><span>ООО «ХАЙТЕК МЕДИА»</span></p>
+                                            </li>
+                                            <li>
+                                                <p><span>ИНН:</span> 2100000978</p>
+                                                <p><span>ОГРН:</span> 1222100007436</p>
+                                            </li>
+                                            <li>
+                                                <p><span>Адрес:</span> 428017, Чувашская Республика, г. Чебоксары, 
+                                                    ул. Т. Кривова, 4. офис 316</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button class="contacts-info__btn">
+                                    <div class="contacts-info__btn-icon">
+                                        <span class="gradient-color">+</span>
+                                    </div>
+                                    <span class="contacts-info__btn-text">Реквизиты</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            id="contacts-map"
+                            class="contacts__map"
+                            data-ymaps-apikey="37249ecc-76a8-4253-a8f1-5ab0b85ad97f"
+                            data-ymaps-address="Чебоксары, ул. Т. Кривова, 4"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <div class="footer__body-top">
+                    <a href="" class="footer__logo">
+                        <img src="/assets/img/icons/i-footer-logo.svg" alt="">
+                    </a>
+                    <ul class="footer__contacts-list">
+                        <li class="footer__contacts-list-item">
+                            <a href="" class="footer__contacts-list-link gradient-color" data-phone>+7 917 078 86 26</a>
+                        </li>
+                        <li class="footer__contacts-list-item">
+                            <a href="" class="footer__contacts-list-link gradient-color" data-email>htmedia.info@mail.ru</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__body-row">
+                    <div class="footer__body-col">
+                        <div class="footer__body-col-title">
+                            <h3>Компания</h3>
+                        </div>
+                        <div class="footer__body-col-content">
+                            <ul class="footer__body-col-list">
+                                <li class="footer__body-col-item">
+                                    <a href="" class="footer__body-col-link">О компании</a>
+                                </li>
+                                <li class="footer__body-col-item">
+                                    <a href="" class="footer__body-col-link">Сертификаты</a>
+                                </li>
+                                <li class="footer__body-col-item">
+                                    <a href="" class="footer__body-col-link">Партнеры</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__body-col">
+                        <div class="footer__body-col-title">
+                            <h3>Услуги</h3>
+                        </div>
+                        <div class="footer__body-col-content">
+                            <ul class="footer__body-col-list">
+                                <li class="footer__body-col-item">
+                                    <a href="" class="footer__body-col-link">WEB разработка</a>
+                                </li>
+                                <li class="footer__body-col-item">
+                                    <a href="" class="footer__body-col-link">Внедрение Битрикс 24</a>
+                                </li>
+                                <li class="footer__body-col-item">
+                                    <a href="" class="footer__body-col-link">Техническая поддержка</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__body-col footer__body-col-center">
+                        <ul class="footer__body-col-info-list">
+                            <li class="footer__body-col-info-item">
+                                <p>428017, Чувашская Республика, г. Чебоксары,<br>
+                                    ул. Т. Кривова, 4. офис 316</p>
+                            </li>
+                            <li class="footer__body-col-info-item">
+                                <p>ИНН: 2100000978 ОГРН: 1222100007436</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__body-row">
+                    <div class="footer__body-col">
+                        <a href="" class="footer__body-col-icon">
+                            <img src="/assets/img/icons/i-org.svg" alt="Ведущая организация ИТ-индустрии Чувашской Республики">
+                        </a>
+                    </div>
+                    <div class="footer__body-col">
+                        <a href="" class="footer__body-col-icon">
+                            <img src="/assets/img/icons/i-it.svg" alt="Аккредитованная ИТ-компания">
+                        </a>
+                    </div>
+                    <div class="footer__body-col footer__body-col-end">
+                        <p class="footer__body-col-text">
+                            Настоящий сайт является официальным сайтом ООО «Хайтек медиа». Компания осуществляет деятельность в области информационных технологий, включена в Реестр аккредитованных ИТ-компаний (№ 65635 от 25.11.2024 г.).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__bottom-copyright">© 2025 ООО «ХАЙТЕК МЕДИА»</span>
+                <a href="" class="footer__bottom-policy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/libs/jquery.min.js"></script>
+    <script src="/assets/libs/swiper-bundle.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/swiper.js"></script>
+</body>
+</html>

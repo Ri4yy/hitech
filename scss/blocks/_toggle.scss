@@ -5,7 +5,7 @@
         display: none;
     }
     & input[type=radio]:checked + label {
-        border-color: $main-color;
+        
     }
     & input[type=radio]:disabled + label {
         cursor: not-allowed;
@@ -16,7 +16,6 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 130%;
-        color: $main-text;
         border: 1px solid rgb(232, 232, 232);
         border-radius: 12px;
         cursor: pointer;
@@ -24,7 +23,7 @@
         transition: border-color .3s;
 
         &:hover {
-            border-color: $main-color;
+            
         }
     }
 

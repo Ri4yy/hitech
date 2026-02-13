@@ -1,0 +1,31 @@
+.input {
+    border: 1px solid rgba(255, 255, 255, 0.23);
+    border-radius: 15px;
+    padding: 12px 20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    background: #e8e8e8;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(77, 77, 77, 0.6);
+    
+    width: 100%;
+
+    &::placeholder {
+        font-weight: 500;
+        font-size: 16px;
+        color: rgba(77, 77, 77, 0.6);
+    }
+
+    &:focus {
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &.is-error {
+        border-color: #9f1014 !important;
+
+        &::placeholder {
+            color: #9f1014 !important;
+        }
+    }
+} 

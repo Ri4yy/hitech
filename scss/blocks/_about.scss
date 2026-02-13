@@ -1,0 +1,128 @@
+.about {
+    position: relative;
+    padding: 50px 0;
+
+    @media(max-width: $breakpoint768) {
+        padding: 36px 0;
+    }
+    @media(max-width: $breakpoint480) {
+        padding: 28px 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        @media(max-width: $breakpoint768) {
+            flex-direction: column;
+            align-items: start;
+            gap: 24px;
+        }
+    }
+
+    &__content {
+        max-width: 700px;
+    }
+
+    &__title {
+        font-family: var(--font-family-ruberoid);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 120%;
+        color: var(--gray);
+
+        @media(max-width: $breakpoint768) {
+            font-size: 32px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 160%;
+        color: var(--dark-gray);
+
+        @media(max-width: $breakpoint768) {
+            font-size: 20px;
+            margin-top: 16px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 16px;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        & img {
+            max-width: 200px;
+
+            @media(max-width: $breakpoint768) {
+                max-width: 160px;
+            }
+        }
+    }
+
+    
+    &__circle {
+        position: absolute;
+
+        border-radius: 100%;
+        filter: blur(150px);
+        z-index: -1;
+        pointer-events: none;
+
+        &:nth-of-type(1) {
+            width: 600px;
+            height: 600px;
+            background: rgba(139, 110, 255, 0.3);
+            top: -100px;
+            left: -100px;
+
+            @media(max-width: $breakpoint992) {
+                width: 500px;
+                height: 500px;
+                top: 70%;
+                left: 0;
+            }
+            @media(max-width: $breakpoint600) {
+                width: 300px;
+                height: 300px;
+                background: rgba(139, 110, 255, 0.5);
+                top: auto;
+                bottom: -80%;
+                left: 0;
+            }
+        }
+        &:nth-of-type(2) {
+            width: 600px;
+            height: 600px;
+            background: rgba(74, 165, 254, 0.3);
+            top: -100px;
+            right: 50px;
+
+            @media(max-width: $breakpoint992) {
+                width: 500px;
+                height: 500px;
+                top: 50%;
+                right: 0;
+            }
+            @media(max-width: $breakpoint600) {
+                width: 300px;
+                height: 300px;
+                background: rgba(74, 165, 254, 0.4);
+                top: auto;
+                right: 0;
+            }
+        }
+    }
+}
+

@@ -24,7 +24,6 @@
         font-weight: 600;
         font-size: 28px;
         line-height: 130%;
-        color: $main-text;
         pointer-events: none;
 
         @media(max-width: $breakpoint768) {
@@ -60,14 +59,13 @@
         width: 36px;
         height: 36px;
         border-radius: 50%;
-        background-color: $secondary-color;
+        
         @media(max-width: $breakpoint768) {
             width: 24px;
             height: 24px;
         }
 
         &.open {
-            background-color: $main-color;
 
             & span {
                 &:nth-of-type(2) {
@@ -89,6 +87,7 @@
                 top: 50%;
                 left: 50%;
                 translate: -50% -50%;
+
                 @media(max-width: $breakpoint768) {
                     width: 14px;
                 }
@@ -99,6 +98,7 @@
                 top: 50%;
                 left: 50%;
                 translate: -50% -50%;
+
                 @media(max-width: $breakpoint768) {
                     height: 14px;
                 }

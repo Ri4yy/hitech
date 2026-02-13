@@ -1,0 +1,128 @@
+ .portfolio-problems {
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media(max-width: $breakpoint992) {
+        flex-direction: column;
+        gap: 30px;
+    }
+    @media(max-width: $breakpoint600) {
+        gap: 20px;
+    }
+
+    &__title {
+        max-width: 460px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media(max-width: $breakpoint992) {
+            gap: 20px;
+        }
+
+        & li {
+            position: relative;
+            padding-left: 50px;
+
+            @media(max-width: $breakpoint600) {
+                padding-left: 38px;
+            }
+
+            & p {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 140%;
+                color: #4d4d4d;
+
+                @media(max-width: $breakpoint600) {
+                    font-size: 20px;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: #E8E8E8;
+                box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.32);
+
+                @media(max-width: $breakpoint600) {
+                    top: 2px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 8px;
+                top: 8px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: #e62c2d;
+
+                @media(max-width: $breakpoint600) {
+                    width: 14px;
+                    height: 14px;
+                    left: 5px;
+                    top: 7px;
+                }
+            }
+        }
+    }
+
+    &__circle {
+        position: absolute;
+
+        border-radius: 100%;
+        filter: blur(150px);
+        z-index: 1;
+        pointer-events: none;
+
+        &:nth-of-type(1) {
+            width: 300px;
+            height: 300px;
+            background: rgba(74, 165, 254, 0.5);
+
+            top: 100px;
+            left: -50px;
+
+            @media(max-width: $breakpoint992) {
+                width: 200px;
+                height: 200px;
+
+                top: auto;
+                bottom: 0;
+            }
+        }
+        &:nth-of-type(2) {
+            width: 250px;
+            height: 250px;
+            background: rgba(139, 110, 255, 0.5);
+            
+            top: 0;
+            left: 20%;
+
+            @media(max-width: $breakpoint992) {
+                width: 200px;
+                height: 200px;
+                
+                right: 0;
+                left: auto;
+                top: 0;
+            }
+        }
+    }
+}
+

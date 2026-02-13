@@ -1,0 +1,45 @@
+.stats {
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        @media(max-width: $breakpoint992) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        @media(max-width: $breakpoint480) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+
+    &__item {
+        text-align: left;
+
+        &-value {
+            font-family: var(--font-family-montserrat);
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 1;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 40px;
+            }
+        }
+
+        &-text {
+            margin-top: 8px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            color: var(--dark-gray);
+
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+                margin-top: 6px;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.portfolio {
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        @media(max-width: $breakpoint992) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        @media(max-width: $breakpoint600) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        &-link {
+            display: inline-block;
+
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+            background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+            border: 1px solid rgba(255, 255, 255, 0.23);
+            border-radius: 40px;
+            padding: 13px 36px;
+
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            color: #fff;
+            transition: opacity .3s ease;
+
+            &:hover {
+                opacity: 0.85;
+            }
+
+            @media(max-width: $breakpoint600) {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    }
+}

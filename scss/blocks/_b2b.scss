@@ -1,0 +1,79 @@
+.b2b {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: -200px;
+
+        filter: blur(3px);
+        opacity: 0.6;
+
+        aspect-ratio: 560 / 461;
+        width: 560px;
+        background-image: url('/assets/img/models/b2b.svg');
+        background-size: contain;
+
+        @media(max-width: $breakpoint992) {
+            left: auto;
+            top: -20px;
+            right: -30%;
+        }
+        @media(max-width: $breakpoint600) {
+            top: 120px;
+            right: -200px;
+            width: 360px;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        @media(max-width: $breakpoint992) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    &__left {
+
+        &-text {
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 140%;
+            color: var(--dark-gray);
+
+            @media(max-width: $breakpoint600) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__right {
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &-item {
+
+            &-title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 140%;
+
+                @media(max-width: $breakpoint600) {
+                    font-size: 16px;
+                }
+            }
+            &-content {
+                margin-top: 12px;
+            }
+        }
+    }
+}

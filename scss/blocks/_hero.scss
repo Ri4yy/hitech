@@ -1,0 +1,247 @@
+.hero {
+
+    &--dev {
+        padding-bottom: 50px;
+
+        @media(max-width: $breakpoint768) {
+            padding-bottom: 36px;
+        }
+        @media(max-width: $breakpoint480) {
+            padding-bottom: 28px;
+        }
+
+        & .hero__wrapper {
+            @media(max-width: $breakpoint1200) {
+                padding-bottom: 120px;
+            }
+            @media(max-width: $breakpoint768) {
+                padding-bottom: 0;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+            }
+            @media(max-width: $breakpoint600) {
+                gap: 24px;
+            }
+        }
+        & .hero__info {
+            max-width: 880px;
+
+            @media(max-width: $breakpoint768) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &-title, 
+            &-content p {
+                @media(max-width: $breakpoint768) {
+                    text-align: center;
+                }
+                @media(max-width: $breakpoint600) {
+                    text-align: start;
+                }
+            }
+
+            &-btn-wrapper {
+                margin-top: 80px;
+
+                @media(max-width: $breakpoint768) {
+                    margin-top: 0;
+                }
+
+                &--pc {
+                    @media(max-width: $breakpoint768) {
+                        display: none;
+                    }
+                }
+                &--mobile {
+                    display: none;
+
+                    @media(max-width: $breakpoint768) {
+                        display: block;
+                    }
+                }
+            }
+        }
+        & .hero__image {
+            right: calc((100% - $container-width) / 2);
+
+            @media(max-width: $breakpoint1200) {
+                right: 24px;
+            }
+            @media(max-width: $breakpoint768) {
+                position: relative;
+                right: 0;
+            }
+
+            & img {
+                max-width: 500px;
+                
+                @media(max-width: $breakpoint600) {
+                    max-width: 360px;
+                }
+                @media(max-width: $breakpoint480) {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+    &--seo {
+        .hero__wrapper {
+            padding-bottom: 184px;
+
+            @media(max-width: 1760px) {
+                padding-bottom: 320px;
+            }
+            @media(max-width: $breakpoint768) {
+                padding-bottom: 275px;
+            }
+            @media(max-width: $breakpoint480) {
+                padding-bottom: 200px;
+            }
+        }
+        & .hero__info {
+            max-width: 690px;
+        }
+        & .hero__image {
+            right: 0;
+
+            @media(max-width: $breakpoint1200) {
+                width: max-content;
+                right: -280px;
+            }
+            @media(max-width: $breakpoint992) {
+                right: -320px;
+            }
+            @media(max-width: $breakpoint768) {
+                width: auto;
+                right: -230px;
+                left: -100px;
+            }
+            @media(max-width: $breakpoint480) {
+                right: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding-left: calc((100% - $container-width) / 2);
+
+        position: relative;
+
+        @media(max-width: $breakpoint1200) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        @media(max-width: $breakpoint768) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+    &__info {
+        position: inherit;
+        z-index: 2;
+
+        &-title {
+            font-family: var(--font-family-ruberoid);
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 1;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 56px;
+            }
+            @media(max-width: $breakpoint600) {
+                font-size: 36px;
+                line-height: 1.2;
+            }
+
+            & span {
+                &:first-child {
+                    background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &:last-child {
+                    display: block;
+                    font-size: 48px;
+                    color: #6d6d6d;
+                    
+                    @media(max-width: $breakpoint600) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        &-content {
+            margin-top: 18px;
+
+            & p {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 140%;
+
+                @media(max-width: $breakpoint600) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-list {
+
+            &-text {
+                position: relative;
+                padding-left: 32px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    left: 12px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+                
+                    @media(max-width: $breakpoint600) {
+                        top: 7px;
+                    }
+                }
+            }
+        }
+
+        &-btn-wrapper {
+            margin-top: 18px;
+        }
+        &-btn {
+            display: block;
+            width: fit-content;
+
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+            background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+            border: 1px solid rgba(255, 255, 255, 0.23);
+            border-radius: 40px;
+            padding: 13px 24px;
+
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            color: #fff;
+
+            @media(max-width: $breakpoint600) {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+    }
+}

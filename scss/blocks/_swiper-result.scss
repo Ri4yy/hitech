@@ -1,0 +1,13 @@
+.swiper-result {
+
+    &__text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        color: var(--dark-gray);
+
+        @media(max-width: $breakpoint768) {
+            font-size: 16px;
+        }
+    }
+}

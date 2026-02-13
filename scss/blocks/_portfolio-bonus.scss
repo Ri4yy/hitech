@@ -1,0 +1,87 @@
+ .portfolio-bonus {
+    padding: 16px 0;
+
+    display: flex;
+
+    &__list {
+        display: grid;
+        grid-template-columns: auto 100px auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        
+        width: 100%;
+
+        @media(max-width: $breakpoint992) {
+            grid-template-columns: auto 100px;
+            gap: 14px;
+        }
+        @media(max-width: $breakpoint600) {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:nth-child(2) {
+            @media(max-width: $breakpoint992) {
+                justify-self: end;
+            }
+            @media(max-width: $breakpoint600) {
+                justify-self: start;
+            }
+        }
+        &:last-child {
+            @media(max-width: $breakpoint992) {
+                grid-column: 1 / -1;
+
+                justify-self: center;
+            }
+            @media(max-width: $breakpoint600) {
+                grid-column: unset;
+                justify-self: start;
+            }
+        }
+
+        &-inner {
+            & p {
+                font-family: var(--font-family-ruberoid);
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 120%;
+                color: rgba(109, 109, 109, 0.6);
+
+                @media(max-width: 1080px) {
+                    font-size: 40px;
+                }
+                @media(max-width: $breakpoint600) {
+                    font-size: 32px;
+                }
+                @media(max-width: $breakpoint480) {
+                    font-size: 24px;
+                }
+            }
+        }
+        & svg {
+            @media(max-width: $breakpoint600) {
+                width: 80px;
+                height: 24px;
+            }
+        }
+        &-text {
+            font-weight: 700;
+            font-size: 24px;
+
+            @media(max-width: $breakpoint600) {
+                font-size: 20px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+

@@ -1,36 +1,61 @@
 .header {
-    position: relative;
-    background: #fff;
+    // position: relative;
+    margin: 46px 0;
+
+    @media(max-width: $breakpoint992) {
+        margin: 36px 0;
+    }
+    @media(max-width: $breakpoint480) {
+        margin: 28px 0;
+    }
 
     &__wrapper {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 29px 0;
-        z-index: 2;
 
-        @media(max-width: $breakpoint768) {
-            padding: 20px 0;
-        }
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.25);
+        background: #f6f6f6;
+        border-radius: 16px;
+        padding: 18px 22px;
+        // z-index: 2;
+ 
         @media(max-width: $breakpoint480) {
-            padding: 16px 0;
+            padding: 12px 16px;
         }
     }
 
-    &__contacts {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-    }
-    &__mail {
-
-    }
     &__phone {
+        display: flex;
+        gap: 6px;
+        align-items: center;
 
+        font-family: var(--font-family-ruberoid);
+        font-size: 22px;
+        line-height: 120%;
+        background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &::before {
+            content: url("/assets/img/icons/i-phone.svg");
+            height: 22px;
+            width: 20px;
+        }
+
+        @media(max-width: $breakpoint1180) {
+            font-size: 20px;
+        }
+        @media(max-width: $breakpoint992) {
+            display: none;
+        }
     }
-}
 
-.logo {
-    
+    &__logo {
+        position: relative;
+        z-index: 4;
+    }
+
 }

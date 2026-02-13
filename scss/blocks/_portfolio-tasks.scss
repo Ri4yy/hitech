@@ -1,0 +1,106 @@
+.portfolio-tasks {
+    position: relative;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+
+        @media(max-width: $breakpoint992) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media(max-width: $breakpoint600) {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+    }
+
+    &__item {
+        border-radius: 20px;
+        padding: 16px 20px;
+        background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 50%);
+
+        box-shadow: 0 -3px 5px 0 rgb(255 255 255 / 50%), 0 4px 10px 0 rgb(0 0 0 / 25%), #dfdfdf59 0px 4px 20px 0px inset, rgb(255 255 255 / 35%) 0px 0px 4px 1px inset;
+        z-index: 2;
+
+        & p {
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+        }
+    }
+
+    &__number {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    &__circle {
+        position: absolute;
+
+        border-radius: 100%;
+        filter: blur(150px);
+        z-index: 1;
+        pointer-events: none;
+
+        &:nth-of-type(1) {
+            width: 200px;
+            height: 200px;
+            background: rgba(139, 110, 255, 0.4);
+            top: 0;
+            left: 0;
+
+            @media(max-width: $breakpoint768) {
+                top: auto;
+                bottom: -100px;
+                left: 0;
+            }
+            @media(max-width: $breakpoint480) {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        &:nth-of-type(2) {
+            width: 350px;
+            height: 350px;
+            background: rgba(139, 110, 255, 0.5);
+            top: -80px;
+            left: 25%;
+
+            @media(max-width: $breakpoint768) {
+                top: -80px;
+                left: 100px;
+            }
+            @media(max-width: $breakpoint480) {
+                top: 0;
+                width: 250px;
+                height: 250px;
+            }
+        }
+        &:nth-of-type(3) {
+            width: 300px;
+            height: 300px;
+            background: rgba(74, 165, 254, 0.5);
+            top: -80px;
+            left: 70%;
+            transform: translateX(-50%);
+
+            @media(max-width: $breakpoint768) {
+                top: 40%;
+                left: auto;
+                right: 0;
+                transform: unset;
+            }
+            @media(max-width: $breakpoint480) {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
+

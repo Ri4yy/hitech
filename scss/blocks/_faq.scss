@@ -1,0 +1,92 @@
+.faq {
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 24px;
+
+        @media(max-width: $breakpoint992) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__item {
+        border-radius: 14px;
+        padding: 20px 18px;
+        box-shadow: 0 -3px 5px 0 #fff, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #e8e8e8;
+
+        @media(max-width: $breakpoint600) {
+            padding: 12px 20px;
+        }
+
+        &-top {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+
+            & p {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 140%;
+                text-align: left;
+                color: var(--dark-gray);
+
+                @media(max-width: $breakpoint600) {
+                    font-size: 20px;
+                }
+                @media(max-width: $breakpoint375) {
+                    font-size: 18px;
+                }
+            }
+            & svg {
+                flex-shrink: 0;
+                transition: all .3s;
+            }
+        }
+
+        &-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: all .3s;
+
+            & p {
+                min-height: 0;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 130%;
+                color: var(--dark-gray);
+
+                @media(max-width: $breakpoint600) {
+                    font-size: 18px;
+                }
+                @media(max-width: $breakpoint375) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &.active  {
+            & .faq__item-top p {
+                background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            & .faq__item-top svg {
+                rotate: 180deg;
+            }
+            & .faq__item-content {
+                margin-top: 20px;
+                grid-template-rows: 1fr;
+
+                @media(max-width: $breakpoint600) {
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+}

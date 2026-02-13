@@ -1,25 +1,29 @@
 // color
-$main-color: #548235;
-$accent-color: #D4E1BD;
-$secondary-color: #11332A; 
-$main-text: #3A3737;
+:root {
+    --gray: #6d6d6d;
+    --dark-gray: #4d4d4d;
+    --gradient: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-family-ruberoid: 'Ruberoid', sans-serif;
+}
 
 // breakpoint 
-$breakpoint1440: 1440 + px;
-$breakpoint1280: 1280 + px;
+$breakpoint1200: 1200 + px;
+$breakpoint1180: 1180 + px;
 $breakpoint1024: 1024 + px;
+$breakpoint992: 992 + px;
 $breakpoint768: 768 + px;
+$breakpoint600: 600 + px;
 $breakpoint480: 480 + px;
-$breakpoint375: 375 + px;
-
-// font-family
-$font-family: '';
+$breakpoint375: 375 + px; 
 
 // border-radius
 $main-radius: 35px;
 
 // container
-$container-width: 1440px;
+$container-width: 1200px;
 $section-top: 100px;
 $padding-md: 24px;
 $padding-sm: 16px;
+ 

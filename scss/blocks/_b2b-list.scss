@@ -1,0 +1,23 @@
+.b2b-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__item {
+
+        & p {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            color: var(--dark-gray);
+
+            @media(max-width: $breakpoint600) {
+                font-size: 16px;
+            }
+
+            &::before {
+                content: '- ';
+            }
+        }
+    }
+}

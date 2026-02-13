@@ -4,10 +4,80 @@
 @import "./base/base";
 // Blocks
 @import "./blocks/header";
+@import "./blocks/header-mobile";
 @import "./blocks/modal";
 @import "./blocks/menu";
 @import "./blocks/menu-nav";
 @import "./blocks/btn";
+@import "./blocks/section";
+@import "./blocks/hero";
+@import "./blocks/advantages";
+@import "./blocks/collaboration";
+@import "./blocks/tariffs";
+@import "./blocks/tariffs-list";
+@import "./blocks/differences";
+@import "./blocks/differences-list";
+@import "./blocks/b2b";
+@import "./blocks/b2b-list";
+@import "./blocks/cases-tabs";
+@import "./blocks/swiper-cases";
+@import "./blocks/works";
+@import "./blocks/seo-indicators";
+@import "./blocks/form-callback";
+@import "./blocks/callback";
+@import "./blocks/form";
+@import "./blocks/input";
+@import "./blocks/textarea";
+@import "./blocks/swiper-controls";
+@import "./blocks/reviews";
+@import "./blocks/swiper-reviews";
+@import "./blocks/review-card";
+@import "./blocks/partners";
+@import "./blocks/faq";
+@import "./blocks/why-choose-us";
+@import "./blocks/swiper-result";
+@import "./blocks/footer";
+
+// Services page
+@import "./blocks/services-hero";
+@import "./blocks/services";
+@import "./blocks/stats";
+@import "./blocks/service-card";
+@import "./blocks/portfolio";
+@import "./blocks/portfolio-card";
+@import "./blocks/about";
+@import "./blocks/clients";
+
+// Portfolio case page
+@import "./blocks/portfolio-section";
+@import "./blocks/portfolio-hero";
+@import "./blocks/portfolio-about";
+@import "./blocks/portfolio-problems";
+@import "./blocks/portfolio-tasks";
+@import "./blocks/portfolio-done";
+@import "./blocks/portfolio-bonus";
+@import "./blocks/portfolio-gallery";
+@import "./blocks/portfolio-results";
+
+// Service dev page
+@import "./blocks/dev-mode";
+
+// Contacts page
+@import "./blocks/contacts";
+@import "./blocks/contacts-info";
+
+// Cases page
+@import "./blocks/cases";
+@import "./blocks/section-tabs";
+
+// About page
+@import "./blocks/about-hero";
+@import "./blocks/advantages-marquee";
+@import "./blocks/certificates";
+@import "./blocks/swiper-certificate";
+@import "./blocks/team";
+@import "./blocks/team-stack";
+
 // Custom
 @import "./blocks/custom-checkbox";
 @import "./blocks/custom-radio";

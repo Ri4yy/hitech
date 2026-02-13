@@ -2,19 +2,32 @@
 
 html,
 body {
-    font-family: '';
+    font-family: var(--font-family-montserrat);
     scroll-behavior: smooth;
+    background: #F6F6F6;
+    color: var(--dark-gray);
+    overflow-x: hidden;
 }
-
+ 
 // Заголовки
 h1 {
-    color: $main-color;
+    font-weight: 400;
+    font-size: 40px;
 }
 h2 {
-    color: $main-color;
-}
-h3 {
-    color: $main-text;
+    font-family: var(--font-family-ruberoid);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    color: #6d6d6d;
+
+    @media(max-width: $breakpoint768) {
+        font-size: 32px;
+        line-height: 130%;
+    }
+    @media(max-width: $breakpoint480) {
+        font-size: 24px;
+    }
 }
 
 // База
@@ -23,11 +36,43 @@ h3 {
     width: 100%;
     margin: 0 auto;
 
+    &__head {
+        display: flex;
+        flex-direction: column;
+
+        & > p {
+            margin-top: 20px;
+            max-width: 700px;
+
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 140%;
+            color: var(--dark-gray);
+
+            @media(max-width: $breakpoint768) {
+                font-size: 20px;
+                margin-top: 16px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__inner {
-        margin-top: 40px;
+        margin-top: 20px;
 
         @media(max-width: $breakpoint768) {
-            margin-top: 24px;
+            margin-top: 18px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 16px;
         }
     }
 
@@ -38,23 +83,12 @@ h3 {
         padding: 0 $padding-sm;
     }
 }
-.section {
-    margin-top: $section-top;
 
-    @media(max-width: $breakpoint768) {
-        margin-top: 90px;
-    }
-}
-
-.left-padding {
-    padding-left: calc((100vw - $section-top) / 2);
-
-    @media(max-width: $container-width) {
-        padding-left: $padding-md;
-    }
-    @media(max-width: $breakpoint768) {
-        padding-left: $padding-sm;
-    }
+.gradient-color {
+    background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .no-scroll {

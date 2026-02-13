@@ -1,0 +1,130 @@
+.advantages {
+    
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 24px;
+
+        @media(max-width: $breakpoint480) {
+            gap: 14px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+        box-shadow: 0 -3px 5px 0 #fff, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #e8e8e8;
+        padding: 24px 18px;
+        transition: 
+            box-shadow .3s ease;
+
+        cursor: pointer;
+
+        @media(max-width: $breakpoint480) {
+            padding: 20px 18px;
+            height: 130px;
+        }
+
+        // Псевдоэлемент с градиентом для плавного перехода
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(95deg, rgba(149, 102, 255, 0.7) 0%, rgba(72, 166, 254, 0.7) 100%);
+            opacity: 0;
+            transition: opacity .3s ease;
+            border-radius: 14px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        // Контент должен быть поверх градиента
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        &:nth-of-type(odd) {
+            & .advantages__item-icon {
+                bottom: -95px;
+
+                @media(max-width: $breakpoint480) {
+                    bottom: -125px;
+                }
+            }
+        }
+        &:nth-of-type(even) {
+            &:hover {
+                & .advantages__item-hover {
+                    top: -25px;
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: none;
+            
+            &::before {
+                opacity: 1;
+            }
+            
+            & .advantages__item-icon {
+                transform: translateY(50%);
+            }
+            & .advantages__item-hover {
+                top: 0;
+            }
+            & .advantages__item-text {
+                color: #fff;
+            }
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            text-align: center;
+            color: var(--dark-gray);
+            margin-top: 0;
+            transition: color .3s ease, margin-top .3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            pointer-events: none;
+
+            left: 50%;
+            translate: -50% 0;
+            bottom: -115px;
+
+            transition: transform .3s ease;
+
+            @media(max-width: $breakpoint480) {
+                bottom: -130px;
+            }
+        }
+        &-hover {
+            position: absolute;
+            pointer-events: none;
+
+            left: 50%;
+            translate: -50% 0;
+            top: -100px;
+
+            transition: top .4s ease;
+        }
+    }
+}
