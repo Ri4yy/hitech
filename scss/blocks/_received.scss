@@ -1,0 +1,157 @@
+.received {
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        @media(max-width: $breakpoint1024) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        @media(max-width: $breakpoint600) {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px 22px;
+        border-radius: 20px;
+        background: #e8e8e8;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 -3px 5px 0 rgb(255 255 255 / 50%), 0 4px 10px 0 rgb(0 0 0 / 25%), #dfdfdf59 0px 4px 20px 0px inset, rgb(255 255 255 / 35%) 0px 0px 4px 1px inset;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+
+        @media(max-width: $breakpoint480) {
+            height: 190px;
+            padding: 20px 16px;
+        }
+
+        &-title {
+            position: relative;
+            z-index: 2;
+            font-family: var(--font-family-montserrat);
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 130%;
+            background: linear-gradient(95deg, #9566ff 0%, #48a6fe 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+
+            @media(max-width: $breakpoint1024) {
+                font-size: 20px;
+            }
+
+            @media(max-width: $breakpoint480) {
+                font-size: 18px;
+            }
+        }
+
+        &-tags {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            @media(max-width: $breakpoint480) {
+                gap: 6px;
+            }
+        }
+
+        &-tag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 14px;
+            border-radius: 100px;
+            border: 1px solid #abafb1;
+            font-size: 16px;
+            font-weight: 500;
+            color: #4d4d4d;
+            line-height: 1.2;
+
+            @media(max-width: $breakpoint480) {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+        }
+
+        &-image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            pointer-events: none;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            & img {
+                display: block;
+                max-height: 100%;
+                object-fit: contain;
+                user-select: none;
+            }
+        }
+
+        &--site {
+            .received__item-image {
+                right: 0;
+                bottom: 0;
+
+                & img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: right bottom;
+                }
+            }
+        }
+
+        &--pack {
+            .received__item-image {
+                right: 0;
+                bottom: 0;
+
+                & img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: right bottom;
+                }
+            }
+        }
+
+        &--brand {
+            .received__item-image {
+                right: 0;
+                bottom: 0;
+
+                & img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: right bottom;
+                }
+            }
+        }
+    }
+}
