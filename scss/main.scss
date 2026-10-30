@@ -88,3 +88,28 @@
 @import "./blocks/accordion";
 @import "./blocks/tabs";
 
+// Blog pages
+@import "./blocks/blog";
+@import "./blocks/blog-card";
+@import "./blocks/blog-pagination";
+@import "./blocks/article";
+
+// Bitrix24 page
+@import "./blocks/b24-prices";
+@import "./blocks/b24-tariff";
+@import "./blocks/b24-cases";
+@import "./blocks/b24-case-card";
+
+// AI service page
+@import "./blocks/ai-hero";
+@import "./blocks/ai-tabs";
+@import "./blocks/ai-card";
+
+@import "./blocks/ai-voice";
+
+@import "./blocks/context-placements";
+@import "./blocks/context-cases";
+
+@import "./blocks/target-placement";
+
+@import "./blocks/home-header";

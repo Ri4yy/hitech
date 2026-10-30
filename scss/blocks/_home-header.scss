@@ -1,0 +1,25 @@
+// Sticky работает относительно окна: скрываем горизонтальное переполнение без создания области прокрутки.
+.home-page:not(.no-scroll), .home-page body { overflow-x: clip; }
+.home-header {
+    position: sticky;
+    top: 12px;
+    z-index: 100;
+}
+@media (max-width: 600px) { .home-header { top: 8px; } }
+.home-header__nav { display:flex; align-items:center; gap:36px; font-size:18px; font-weight:600; }
+.home-header__nav a:hover,.home-menu a:hover { color:#9566ff; }
+.home-header__services { position:static; }
+.home-header__trigger { cursor:pointer; font:inherit; }
+.home-header__services:hover .home-header__trigger,.home-header__services:focus-within .home-header__trigger { color:#9566ff; }
+.home-header__dropdown { display:none; position:absolute; top:100%; left:0; width:100%; padding-top:10px; }
+.home-header__services:hover .home-header__dropdown,.home-header__services:focus-within .home-header__dropdown,.home-header__services.is-open .home-header__dropdown { display:block; }
+.home-menu { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; padding:32px 42px; border-radius:16px; background:#f6f6f6; box-shadow:0 2px 7px rgba(0,0,0,.25); }
+.home-menu__group { display:flex; flex-direction:column; gap:6px; font-size:18px; font-weight:700; }
+.home-menu__group span { font-size:14px; font-weight:400; }
+.home-menu__group:nth-child(5) { grid-column:4; }
+.home-mobile { display:none; }
+@media(max-width:1024px) { .home-header__nav { display:none; } .home-mobile.open { display:block; position:fixed; inset:0; overflow-y:auto; background:#f6f6f6; z-index:3; } .home-header .btn-menu,.home-header .header__logo { z-index:5; } .home-mobile__content { padding:170px 8% 40px; max-width:834px; margin:auto; } .home-mobile__nav { display:flex; justify-content:center; gap:36px; font-size:18px; font-weight:600; } .home-mobile__services { margin:60px auto; padding:0; max-width:620px; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; box-shadow:none; } .home-mobile__services .home-menu__group:nth-child(5) { grid-column:auto; } .home-mobile__contact { display:flex; flex-direction:column; align-items:center; gap:12px; } .home-mobile__contact .header__phone { display:flex; } }
+@media(max-width:600px) { .home-mobile__content { padding:115px 20px 40px; } .home-mobile__nav { display:flex; flex-direction:column; align-items:center; gap:25px; } .home-mobile__services { display:flex; flex-direction:column; align-items:center; gap:0; margin:12px auto 25px; } .home-mobile__services .home-menu__group { align-items:center; gap:14px; font-size:15px; } .home-mobile__services .home-menu__group + .home-menu__group { margin-top:14px; } .home-mobile__services .home-menu__group span { display:none; } .home-mobile nav { display:flex; flex-direction:column; } .home-mobile__nav { display:contents; } .home-mobile__nav span { order:0; text-align:center; } .home-mobile__services { order:1; } .home-mobile__nav a { order:2; text-align:center; margin:0 0 25px; } .home-mobile__contact { margin-top:25px; } }
+.home-header__nav a, .home-menu a, .home-mobile__nav a { color:#4d4d4d; text-decoration:none; }
+.home-header__nav a:hover, .home-menu a:hover, .home-mobile__nav a:hover { color:#9566ff; }
+.home-mobile::before { content:none; }

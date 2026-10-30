@@ -1,0 +1,9 @@
+.b24-case-card {
+    height: 100%; padding: 20px 18px; border-radius: 14px; background: #e8e8e8; box-shadow: 0 -3px 5px #fff, 0 4px 4px rgba(0,0,0,.25); transition: transform .25s ease, box-shadow .25s ease;
+    &__title { font-size: 20px; line-height: 1.2; font-weight: 700; }
+    &__content { margin-top: 14px; font-size: 16px; line-height: 1.35; font-weight: 500; }
+    &__label { color: #999; }
+    &__label--result { margin-top: 20px; color: #9566ff; }
+    @media (hover: hover) { &:hover { transform: translateY(-3px); box-shadow: 0 -3px 5px #fff, 0 8px 12px rgba(0,0,0,.2); } }
+    @media (prefers-reduced-motion: reduce) { transition: none; &:hover { transform: none; } }
+}

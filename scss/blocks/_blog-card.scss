@@ -1,0 +1,28 @@
+.blog-card {
+    min-width: 0;
+    &__image { display: block; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 4px rgba(0,0,0,.25); aspect-ratio: 360 / 212; }
+    &__image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    &__meta { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; font-size: 12px; font-weight: 500; }
+    &__meta time { color: rgba(77,77,77,.5); }
+    &__title { margin-top: 12px; font-size: 20px; font-weight: 700; line-height: 1.2; }
+    &__title a { color: inherit; }
+    &__title a:hover, &__title a:focus-visible { background: var(--gradient); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    &--featured &__image { aspect-ratio: 1.95; }
+    &--featured &__meta { font-size: 20px; }
+    &--featured &__title { font-size: 32px; }
+    @media(max-width: $breakpoint480) {
+        &__meta { font-size: 10px; gap: 4px 8px; margin-top: 8px; }
+        &__title { font-size: 14px; margin-top: 8px; }
+        &--featured &__meta { font-size: 14px; }
+        &--featured &__title { font-size: 20px; }
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .blog-card__image img { transition: transform .3s ease; }
+    .blog-card:hover .blog-card__image img { transform: scale(1.035); }
+}
+.blog-card__image:focus-visible, .blog-card__title a:focus-visible {
+    outline: 2px solid #9566ff;
+    outline-offset: 4px;
+}
