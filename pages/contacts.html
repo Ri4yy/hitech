@@ -1,78 +1,68 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="home-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
     <link rel="stylesheet" href="/assets/libs/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?v=header-footer-1">
     <!-- Стили стандартных UI-контролов Яндекс.Карт v3 (зум/геолокация и т.п.) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yandex/ymaps3-default-ui-theme@latest/dist/esm/index.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header home-header">
         <div class="container">
-            <div class="header__wrapper">
-                <a href="/" class="header__logo">
-                    <img src="/assets/img/icons/logo.svg" alt="Логотип">
-                </a>
-                <nav class="menu">
-                    <ul class="menu-nav">
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link menu-nav__link--active">Стоимость</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Кейсы</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Преимущества</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Наши цели</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__contacts">
-                    <a href="tel:" class="header__phone">+7 917 078 86 26</a>
-                </div>
-                <button class="btn-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="header__wrapper"><a href="/" class="header__logo"><img src="/assets/img/icons/logo.svg"
+                        alt="Хайтек Медиа"></a>
+                <nav class="home-header__nav" aria-label="Основное меню">
+                    <div class="home-header__services"><button class="home-header__trigger" type="button"
+                            aria-expanded="false" aria-controls="home-dropdown">Услуги</button>
+                        <div class="home-header__dropdown" id="home-dropdown">
+                            <div class="home-menu">
+                                <div class="home-menu__group"><span>Разработка</span><a
+                                        href="/pages/service-dev.html">Разработка сайтов</a></div>
+                                <div class="home-menu__group"><span>CRM</span><a
+                                        href="/pages/service-b24.html">Внедрение Битрикс24</a></div>
+                                <div class="home-menu__group"><span>Интернет-маркетинг</span><a
+                                        href="/pages/service-adv.html">Контекстная реклама</a><a
+                                        href="/pages/service-seo.html">SEO-продвижение</a><a
+                                        href="/pages/service-target.html">Таргет</a></div>
+                                <div class="home-menu__group"><span>Искусственный интеллект</span><a
+                                        href="/pages/service-ai.html">Интеграция ИИ</a></div>
+                                <div class="home-menu__group"><span>Дизайн</span><a
+                                        href="/pages/service-design.html">Комплексный дизайн</a></div>
+                            </div>
+                        </div>
+                    </div><a href="/pages/cases.html">Кейсы</a><a href="/pages/about.html">О компании</a><a
+                        href="/pages/blog.html">Блог</a><a href="/pages/contacts.html">Контакты</a>
+                </nav><a class="header__phone" href="tel:+79170788626">+7 917 078 86 26</a><button class="btn-menu"
+                    type="button" aria-label="Открыть меню" aria-expanded="false"
+                    aria-controls="home-mobile"><span></span><span></span><span></span></button>
             </div>
-        </div> 
-        <div class="header-mobile">
-            <div class="header-mobile__wrapper">
-                <div class="header-mobile__wrapper-inner">
-                    <ul class="header-mobile__menu">
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Стоимость</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Кейсы</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Преимущества</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Наши цели</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Контакты</a>
-                        </li>
-                    </ul>
-                    <div class="header-mobile__bottom">
-                        <p class="header-mobile__bottom-title">Свяжитесь с нами:</p>
-                        <ul class="header-mobile__contacts">
-                            <li class="header-mobile__contacts-item">
-                                <a href="" class="header-mobile__contacts-link">+7 (8352) 36-83-71</a>
-                            </li>
-                        </ul>
+        </div>
+        <div class="header-mobile home-mobile" id="home-mobile">
+            <div class="home-mobile__content">
+                <nav aria-label="Мобильное меню">
+                    <div class="home-mobile__nav"><span class="gradient-color">Услуги</span><a
+                            href="/pages/cases.html">Кейсы</a><a href="/pages/about.html">О компании</a><a
+                            href="/pages/blog.html">Блог</a><a href="/pages/contacts.html">Контакты</a></div>
+                    <div class="home-mobile__services home-menu">
+                        <div class="home-menu__group"><span>Разработка</span><a
+                                href="/pages/service-dev.html">Разработка сайтов</a></div>
+                        <div class="home-menu__group"><span>CRM</span><a href="/pages/service-b24.html">Внедрение
+                                Битрикс24</a></div>
+                        <div class="home-menu__group"><span>Интернет-маркетинг</span><a
+                                href="/pages/service-adv.html">Контекстная реклама</a><a
+                                href="/pages/service-seo.html">SEO-продвижение</a><a
+                                href="/pages/service-target.html">Таргет</a></div>
+                        <div class="home-menu__group"><span>Искусственный интеллект</span><a
+                                href="/pages/service-ai.html">Интеграция ИИ</a></div>
+                        <div class="home-menu__group"><span>Дизайн</span><a
+                                href="/pages/service-design.html">Комплексный дизайн</a></div>
                     </div>
+                </nav>
+                <div class="home-mobile__contact">
+                    <p>Свяжитесь с нами:</p><a class="header__phone" href="tel:+79170788626">+7 917 078 86 26</a>
                 </div>
             </div>
         </div>
@@ -139,38 +129,39 @@
     </main>
 
     <!-- Подвал -->
-    <footer class="footer">
+    <footer class="footer footer--home">
         <div class="container">
             <div class="footer__body">
                 <div class="footer__body-top">
-                    <a href="" class="footer__logo">
+                    <a href="/" class="footer__logo">
                         <img src="/assets/img/icons/i-footer-logo.svg" alt="">
                     </a>
                     <ul class="footer__contacts-list">
                         <li class="footer__contacts-list-item">
-                            <a href="" class="footer__contacts-list-link gradient-color" data-phone>+7 917 078 86 26</a>
+                            <a href="tel:+79170788626" class="footer__contacts-list-link gradient-color" data-phone>+7
+                                917 078 86 26</a>
                         </li>
                         <li class="footer__contacts-list-item">
-                            <a href="" class="footer__contacts-list-link gradient-color" data-email>htmedia.info@mail.ru</a>
+                            <a href="mailto:htmedia.info@mail.ru" class="footer__contacts-list-link gradient-color"
+                                data-email>htmedia.info@mail.ru</a>
                         </li>
                     </ul>
                 </div>
-                <div class="footer__body-row">
+                <div class="footer__body-row footer__body-row--navigation">
                     <div class="footer__body-col">
                         <div class="footer__body-col-title">
-                            <h3>Компания</h3>
+                            <h3>Навигация</h3>
                         </div>
                         <div class="footer__body-col-content">
                             <ul class="footer__body-col-list">
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">О компании</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Сертификаты</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Партнеры</a>
-                                </li>
+                                <li class="footer__body-col-item"><a href="/pages/cases.html"
+                                        class="footer__body-col-link">Кейсы</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/about.html"
+                                        class="footer__body-col-link">О компании</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/blog.html"
+                                        class="footer__body-col-link">Блог</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/contacts.html"
+                                        class="footer__body-col-link">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -179,16 +170,21 @@
                             <h3>Услуги</h3>
                         </div>
                         <div class="footer__body-col-content">
-                            <ul class="footer__body-col-list">
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">WEB разработка</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Внедрение Битрикс 24</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Техническая поддержка</a>
-                                </li>
+                            <ul class="footer__body-col-list footer__body-col-list--services">
+                                <li class="footer__body-col-item"><a href="/pages/service-dev.html"
+                                        class="footer__body-col-link">Разработка сайтов</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-design.html"
+                                        class="footer__body-col-link">Комплексный дизайн</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-b24.html"
+                                        class="footer__body-col-link">Внедрение Битрикс24</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-ai.html"
+                                        class="footer__body-col-link">Интеграция ИИ</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-seo.html"
+                                        class="footer__body-col-link">SEO-продвижение</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-adv.html"
+                                        class="footer__body-col-link">Контекстная реклама</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-target.html"
+                                        class="footer__body-col-link">Таргет</a></li>
                             </ul>
                         </div>
                     </div>
@@ -204,23 +200,28 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer__body-row">
-                    <div class="footer__body-col">
-                        <a href="" class="footer__body-col-icon">
-                            <img src="/assets/img/icons/i-org.svg" alt="Ведущая организация ИТ-индустрии Чувашской Республики">
-                        </a>
-                    </div>
-                    <div class="footer__body-col">
-                        <a href="" class="footer__body-col-icon">
-                            <img src="/assets/img/icons/i-it.svg" alt="Аккредитованная ИТ-компания">
-                        </a>
-                    </div>
-                    <div class="footer__body-col footer__body-col-end">
-                        <p class="footer__body-col-text">
-                            Настоящий сайт является официальным сайтом ООО «Хайтек медиа». Компания осуществляет деятельность в области информационных технологий, включена в Реестр аккредитованных ИТ-компаний (№ 65635 от 25.11.2024 г.).
-                        </p>
-                    </div>
+                <div class="footer__badges">
+                    <img class="footer__badge" src="/assets/img/icons/i-it.svg" alt="Аккредитованная ИТ-компания"
+                        loading="lazy" width="224" height="94">
+                    <img class="footer__badge" src="/assets/img/icons/i-org.svg"
+                        alt="Ведущая организация ИТ-индустрии Чувашской Республики" loading="lazy" width="248"
+                        height="94">
+                    <a class="footer__badge-link" href="https://mb21.ru" target="_blank" rel="noopener noreferrer">
+                        <img class="footer__badge" src="/assets/img/icons/partner-apmb.svg"
+                            alt="Партнер АНО «АПМБ» — Мой бизнес, Чувашская Республика" loading="lazy" width="248"
+                            height="94">
+                    </a>
+                    <a class="footer__badge-link" href="https://опорачувашия.рф" target="_blank" rel="noopener noreferrer">
+                        <img class="footer__badge" src="/assets/img/icons/partner-committee.svg"
+                            alt="Опора России — Комитет по информационным технологиям" loading="lazy" width="297"
+                            height="94">
+                    </a>
                 </div>
+                <p class="footer__body-col-text footer__legal">
+                    Настоящий сайт является официальным сайтом ООО «Хайтек медиа». Компания осуществляет деятельность в
+                    области информационных технологий,<br>
+                    включена в Реестр аккредитованных ИТ-компаний (№ 65635 от 25.11.2024 г.).
+                </p>
             </div>
             <div class="footer__bottom">
                 <span class="footer__bottom-copyright">© 2025 ООО «ХАЙТЕК МЕДИА»</span>
@@ -232,6 +233,7 @@
     <script src="/assets/libs/jquery.min.js"></script>
     <script src="/assets/libs/swiper-bundle.min.js"></script>
     <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/home-header.js?v=3"></script>
     <script src="/assets/js/swiper.js"></script>
 </body>
 </html>

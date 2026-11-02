@@ -1,0 +1,29 @@
+.ai-hero {
+    position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; min-height: 378px; gap: 20px;
+    &::before, &::after { content: ''; position: absolute; z-index: -1; width: 330px; height: 280px; border-radius: 50%; filter: blur(120px); pointer-events: none; }
+    &::before { left: 45%; background: rgba(149,102,255,.25); } &::after { right: 0; background: rgba(72,166,254,.25); }
+    &__content { max-width: 713px; }
+    & h1 { font: 400 48px/1.2 var(--font-family-ruberoid); }
+    & p { max-width: 650px; margin: 20px 0 42px; font-size: 20px; line-height: 1.4; font-weight: 600; }
+    &__image { width: 47%; max-width: 566px; object-fit: contain; }
+    @media(max-width: $breakpoint768) { flex-direction: column; align-items: flex-start; & h1 { font-size: 36px; } &__image { align-self: center; width: min(100%, 500px); } }
+    @media(max-width: $breakpoint480) { & h1 { font-size: 28px; } & p { font-size: 16px; margin: 16px 0 24px; } }
+}
+.ai-button { display: inline-flex; justify-content: center; align-items: center; min-height: 50px; padding: 12px 24px; border-radius: 30px; color: white; background: var(--gradient); box-shadow: 0 4px 4px rgba(0,0,0,.25); font-size: 18px; line-height: 1.2; font-weight: 700; transition: opacity .2s ease; }
+.ai-button:hover { opacity: .85; } .ai-button:focus-visible { outline: 2px solid #9566ff; outline-offset: 4px; }
+@media(max-width: 480px) { .ai-button { font-size: 16px; min-height: 44px; } }
+.ai-intro { display: grid; grid-template-columns: 2fr 1fr; align-items: center; gap: 50px; &__card { position: relative; overflow: hidden; padding: 48px 30px; border-radius: 14px; background: #e8e8e8; box-shadow: 0 -3px 5px #fff, 0 4px 4px rgba(0,0,0,.25); font-size: 20px; line-height: 1.4; } &__card::after { content: ''; position: absolute; width: 150px; height: 145px; right: 0; bottom: 0; background: url('../assets/img/ai/corporate.svg') center / contain no-repeat; opacity: .45; pointer-events: none; } &__title { font: 400 32px/1.2 var(--font-family-ruberoid); } @media(max-width: $breakpoint768) { grid-template-columns: 1fr; gap: 24px; } @media(max-width: $breakpoint480) { &__card { padding: 24px 20px 48px; font-size: 16px; } &__title { font-size: 24px; } } }
+.ai-intro, .ai-faq { position: relative; isolation: isolate; }
+.ai-intro::before, .ai-faq::before {
+    content: ''; position: absolute; inset: -70px 0; z-index: -1; pointer-events: none;
+    background: radial-gradient(ellipse 360px 240px at 10% 55%, rgba(72,166,254,.19), transparent 75%), radial-gradient(ellipse 360px 240px at 90% 40%, rgba(149,102,255,.18), transparent 75%);
+}
+
+// Каждый радиальный градиент полностью затухает внутри своего слоя.
+.ai-intro::before, .ai-faq::before {
+    inset: -240px -360px;
+    background-image: radial-gradient(ellipse 360px 240px at center, rgba(72,166,254,.19), transparent 100%), radial-gradient(ellipse 360px 240px at center, rgba(149,102,255,.18), transparent 100%);
+    background-size: 720px 480px, 720px 480px;
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+}

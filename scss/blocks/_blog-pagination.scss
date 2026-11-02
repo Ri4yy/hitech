@@ -1,0 +1,14 @@
+.blog-pagination {
+    display: flex; align-items: center; justify-content: flex-end; gap: 18px; margin-top: 50px; font: 32px/1.2 var(--font-family-ruberoid); color: var(--gray);
+    &__track { position: relative; width: 193px; height: 4px; background: #ccc; border-radius: 35px; }
+    &__track span { position: absolute; top: -2px; display: block; height: 8px; width: 33.333%; border-radius: 35px; background: var(--gradient); }
+    &__arrows { display: flex; width: 55px; height: 24px; margin-left: 18px; background: url('../assets/img/blog/pagination-arrows.svg') center / 55px 24px no-repeat; }
+    &__arrows a { width: 50%; height: 100%; cursor: pointer; }
+    &__arrows a[aria-disabled="true"] { cursor: default; }
+    @media(max-width: $breakpoint480) { gap: 10px; font-size: 24px; margin-top: 28px; &__track { width: 100px; } &__arrows { margin-left: 4px; } }
+}
+
+.blog-pagination__arrows a { border-radius: 5px; transition: background-color .2s ease; }
+.blog-pagination__arrows a[href]:hover { background-color: rgba(149, 102, 255, .15); }
+.blog-pagination__arrows a:focus-visible { outline: 2px solid #9566ff; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .blog-pagination__arrows a { transition: none; } }

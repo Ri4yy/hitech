@@ -1,76 +1,68 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="home-page">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Услуга Б24</title>
     <link rel="stylesheet" href="/assets/libs/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?v=header-footer-1">
 </head>
+
 <body>
-    <header class="header">
+    <header class="header home-header">
         <div class="container">
-            <div class="header__wrapper">
-                <a href="/" class="header__logo">
-                    <img src="/assets/img/icons/logo.svg" alt="Логотип">
-                </a>
-                <nav class="menu">
-                    <ul class="menu-nav">
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link menu-nav__link--active">Стоимость</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Кейсы</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Преимущества</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Наши цели</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="" class="menu-nav__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__contacts">
-                    <a href="tel:" class="header__phone">+7 917 078 86 26</a>
-                </div>
-                <button class="btn-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="header__wrapper"><a href="/" class="header__logo"><img src="/assets/img/icons/logo.svg"
+                        alt="Хайтек Медиа"></a>
+                <nav class="home-header__nav" aria-label="Основное меню">
+                    <div class="home-header__services"><button class="home-header__trigger" type="button"
+                            aria-expanded="false" aria-controls="home-dropdown">Услуги</button>
+                        <div class="home-header__dropdown" id="home-dropdown">
+                            <div class="home-menu">
+                                <div class="home-menu__group"><span>Разработка</span><a
+                                        href="/pages/service-dev.html">Разработка сайтов</a></div>
+                                <div class="home-menu__group"><span>CRM</span><a
+                                        href="/pages/service-b24.html">Внедрение Битрикс24</a></div>
+                                <div class="home-menu__group"><span>Интернет-маркетинг</span><a
+                                        href="/pages/service-adv.html">Контекстная реклама</a><a
+                                        href="/pages/service-seo.html">SEO-продвижение</a><a
+                                        href="/pages/service-target.html">Таргет</a></div>
+                                <div class="home-menu__group"><span>Искусственный интеллект</span><a
+                                        href="/pages/service-ai.html">Интеграция ИИ</a></div>
+                                <div class="home-menu__group"><span>Дизайн</span><a
+                                        href="/pages/service-design.html">Комплексный дизайн</a></div>
+                            </div>
+                        </div>
+                    </div><a href="/pages/cases.html">Кейсы</a><a href="/pages/about.html">О компании</a><a
+                        href="/pages/blog.html">Блог</a><a href="/pages/contacts.html">Контакты</a>
+                </nav><a class="header__phone" href="tel:+79170788626">+7 917 078 86 26</a><button class="btn-menu"
+                    type="button" aria-label="Открыть меню" aria-expanded="false"
+                    aria-controls="home-mobile"><span></span><span></span><span></span></button>
             </div>
-        </div> 
-        <div class="header-mobile">
-            <div class="header-mobile__wrapper">
-                <div class="header-mobile__wrapper-inner">
-                    <ul class="header-mobile__menu">
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Стоимость</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Кейсы</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Преимущества</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Наши цели</a>
-                        </li>
-                        <li class="header-mobile__menu-item">
-                            <a href="" class="header-mobile__menu-link">Контакты</a>
-                        </li>
-                    </ul>
-                    <div class="header-mobile__bottom">
-                        <p class="header-mobile__bottom-title">Свяжитесь с нами:</p>
-                        <ul class="header-mobile__contacts">
-                            <li class="header-mobile__contacts-item">
-                                <a href="" class="header-mobile__contacts-link">+7 (8352) 36-83-71</a>
-                            </li>
-                        </ul>
+        </div>
+        <div class="header-mobile home-mobile" id="home-mobile">
+            <div class="home-mobile__content">
+                <nav aria-label="Мобильное меню">
+                    <div class="home-mobile__nav"><span class="gradient-color">Услуги</span><a
+                            href="/pages/cases.html">Кейсы</a><a href="/pages/about.html">О компании</a><a
+                            href="/pages/blog.html">Блог</a><a href="/pages/contacts.html">Контакты</a></div>
+                    <div class="home-mobile__services home-menu">
+                        <div class="home-menu__group"><span>Разработка</span><a
+                                href="/pages/service-dev.html">Разработка сайтов</a></div>
+                        <div class="home-menu__group"><span>CRM</span><a href="/pages/service-b24.html">Внедрение
+                                Битрикс24</a></div>
+                        <div class="home-menu__group"><span>Интернет-маркетинг</span><a
+                                href="/pages/service-adv.html">Контекстная реклама</a><a
+                                href="/pages/service-seo.html">SEO-продвижение</a><a
+                                href="/pages/service-target.html">Таргет</a></div>
+                        <div class="home-menu__group"><span>Искусственный интеллект</span><a
+                                href="/pages/service-ai.html">Интеграция ИИ</a></div>
+                        <div class="home-menu__group"><span>Дизайн</span><a
+                                href="/pages/service-design.html">Комплексный дизайн</a></div>
                     </div>
+                </nav>
+                <div class="home-mobile__contact">
+                    <p>Свяжитесь с нами:</p><a class="header__phone" href="tel:+79170788626">+7 917 078 86 26</a>
                 </div>
             </div>
         </div>
@@ -153,7 +145,7 @@
                                     Прозрачность работы отдела продаж
                                 </p>
                                 <img src="/assets/img/models/adv-main.svg" class="advantages__item-icon" alt="">
-    
+
                             </div>
                             <div class="advantages__item">
                                 <img src="/assets/img/models/adv-hover.svg" class="advantages__item-hover" alt="">
@@ -161,7 +153,7 @@
                                     Рост конверсии за счёт контроля сделок
                                 </p>
                                 <img src="/assets/img/models/adv-main.svg" class="advantages__item-icon" alt="">
-    
+
                             </div>
                             <div class="advantages__item">
                                 <img src="/assets/img/models/adv-hover.svg" class="advantages__item-hover" alt="">
@@ -169,7 +161,7 @@
                                     Единое информационное пространство для всех сотрудников
                                 </p>
                                 <img src="/assets/img/models/adv-main.svg" class="advantages__item-icon" alt="">
-    
+
                             </div>
                         </div>
                     </div>
@@ -199,7 +191,7 @@
                             </div>
                             <div class="works__item">
                                 <p class="works__item-text">
-                                    Интеграция с сайтом, 1С, почтой, телефонией 
+                                    Интеграция с сайтом, 1С, почтой, телефонией
                                 </p>
                             </div>
                             <div class="works__item">
@@ -209,7 +201,7 @@
                             </div>
                             <div class="works__item">
                                 <p class="works__item-text">
-                                    Техническая поддержка 
+                                    Техническая поддержка
                                 </p>
                             </div>
                             <div class="works__item">
@@ -265,6 +257,252 @@
             </div>
         </section>
 
+        <!-- Стоимость Битрикс24 -->
+        <section class="section" id="b24-prices">
+            <div class="container">
+                <div class="b24-prices" data-b24-prices>
+                    <h2>Стоимость</h2>
+                    <div class="b24-prices__switch" role="group" aria-label="Период оплаты">
+                        <button class="b24-prices__period" type="button" data-period="month"
+                            aria-pressed="false">Месяц</button>
+                        <button class="b24-prices__period b24-prices__period--active" type="button" data-period="year"
+                            aria-pressed="true">Год</button>
+                    </div>
+                    <div class="b24-prices__grid">
+                        <article class="b24-tariff b24-tariff--free">
+                            <div class="b24-tariff__free-info">
+                                <h3 class="b24-tariff__title gradient-color">Бесплатный</h3>
+                                <p class="b24-tariff__price">Бесплатно</p>
+                                <p class="b24-tariff__description">Начните работать онлайн и продавать больше с CRM</p>
+                            </div>
+                            <div class="b24-tariff__free-features">
+                                <div class="b24-tariff__stat"><strong>5 ГБ</strong><span>файловое хранилище</span></div>
+                                <ul class="b24-tariff__tags">
+                                    <li>Совместная работа</li>
+                                    <li>Мессенджер</li>
+                                    <li>Задачи и проекты</li>
+                                    <li>CRM</li>
+                                    <li>CoPilot</li>
+                                    <li>Онлайн-подпись</li>
+                                    <li>Диск</li>
+                                    <li>Контакт-центр</li>
+                                    <li>Сайты</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="b24-tariff">
+                            <div class="b24-tariff__head">
+                                <h3 class="b24-tariff__title gradient-color">Базовый</h3><span
+                                    class="b24-tariff__discount">−20%</span>
+                            </div>
+                            <p class="b24-tariff__price"><span data-year="1 990" data-month="2 490">1 990</span> руб/мес
+                                <del>2 490 руб/мес</del>
+                            </p>
+                            <p class="b24-tariff__description">CRM для небольших отделов продаж</p>
+                            <div class="b24-tariff__stats">
+                                <div class="b24-tariff__stat"><strong>5</strong><span>кол-во пользователей</span></div>
+                                <div class="b24-tariff__stat"><strong>24 ГБ</strong><span>файловое хранилище</span>
+                                </div>
+                            </div>
+                            <div class="b24-tariff__groups">группы пользователей <span
+                                    class="b24-tariff__groups-status b24-tariff__groups-status--no"
+                                    aria-label="недоступны">×</span></div>
+                            <div class="b24-tariff__features">
+                                <ul class="b24-tariff__tags">
+                                    <li>Совместная работа +</li>
+                                    <li>Мессенджер +</li>
+                                    <li>Задачи и проекты +</li>
+                                    <li>CRM +</li>
+                                    <li>CoPilot ++</li>
+                                    <li>Онлайн-подпись +</li>
+                                    <li>Диск +</li>
+                                    <li>Контакт-центр +</li>
+                                    <li>Сайты +</li>
+                                    <li>Интернет-магазин +</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="b24-tariff">
+                            <div class="b24-tariff__head">
+                                <h3 class="b24-tariff__title gradient-color">Стандартный</h3><span
+                                    class="b24-tariff__discount">−20%</span>
+                            </div>
+                            <p class="b24-tariff__price"><span data-year="5 590" data-month="6 990">5 590</span> руб/мес
+                                <del>6 990 руб/мес</del>
+                            </p>
+                            <p class="b24-tariff__description">Для совместной работы всей компании или рабочих групп</p>
+                            <div class="b24-tariff__stats">
+                                <div class="b24-tariff__stat"><strong>50</strong><span>кол-во пользователей</span></div>
+                                <div class="b24-tariff__stat"><strong>100 ГБ</strong><span>файловое хранилище</span>
+                                </div>
+                            </div>
+                            <div class="b24-tariff__groups">группы пользователей <span
+                                    class="b24-tariff__groups-status b24-tariff__groups-status--yes"
+                                    aria-label="доступны">✓</span></div>
+                            <div class="b24-tariff__features">
+                                <p>Всё из тарифа «Базовый», плюс</p>
+                                <ul class="b24-tariff__tags">
+                                    <li>Маркетинг +</li>
+                                    <li>Документы онлайн +</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="b24-tariff">
+                            <div class="b24-tariff__head">
+                                <h3 class="b24-tariff__title gradient-color">Профессиональный</h3><span
+                                    class="b24-tariff__discount">−20%</span>
+                            </div>
+                            <p class="b24-tariff__price"><span data-year="11 190" data-month="13 990">11 190</span>
+                                руб/мес <del>13 990 руб/мес</del></p>
+                            <p class="b24-tariff__description">Для максимальной автоматизации процессов в компании</p>
+                            <div class="b24-tariff__stats">
+                                <div class="b24-tariff__stat"><strong>100</strong><span>кол-во пользователей</span>
+                                </div>
+                                <div class="b24-tariff__stat"><strong>1 024 ГБ</strong><span>файловое хранилище</span>
+                                </div>
+                            </div>
+                            <div class="b24-tariff__groups">группы пользователей <span
+                                    class="b24-tariff__groups-status b24-tariff__groups-status--yes"
+                                    aria-label="доступны">✓</span></div>
+                            <div class="b24-tariff__features">
+                                <p>Всё из тарифа «Стандартный», плюс</p>
+                                <ul class="b24-tariff__tags">
+                                    <li>КЭДО + Госключ +</li>
+                                    <li>Сквозная аналитика +</li>
+                                    <li>Автоматизация +</li>
+                                    <li>HR: Компания +</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="b24-tariff">
+                            <div class="b24-tariff__head">
+                                <h3 class="b24-tariff__title gradient-color">Энтерпрайз</h3><span
+                                    class="b24-tariff__discount">−20%</span>
+                            </div>
+                            <p class="b24-tariff__price"><span data-year="27 190" data-month="33 990">27 190</span>
+                                руб/мес <del>33 990 руб/мес</del></p>
+                            <p class="b24-tariff__description">Для крупных компаний со сложной структурой и масштабными
+                                задачами</p>
+                            <div class="b24-tariff__stats">
+                                <div class="b24-tariff__stat"><strong>250 +</strong><span>кол-во пользователей</span>
+                                </div>
+                                <div class="b24-tariff__stat"><strong>3 ТБ</strong><span>файловое хранилище</span></div>
+                            </div>
+                            <div class="b24-tariff__groups">группы пользователей <span
+                                    class="b24-tariff__groups-status b24-tariff__groups-status--yes"
+                                    aria-label="доступны">✓</span></div>
+                            <div class="b24-tariff__features">
+                                <p>Всё из тарифа «Профессиональный», плюс</p>
+                                <ul class="b24-tariff__tags">
+                                    <li>Филиалы +</li>
+                                    <li>Энтерпрайз-кластер +</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Кейсы Битрикс24 -->
+        <section class="section" id="b24-cases">
+            <div class="container">
+                <div class="b24-cases">
+                    <div class="b24-cases__header">
+                        <h2>Кейсы</h2>
+                        <div class="swiper-controls">
+                            <div class="swiper-controls__fraction"><span
+                                    class="swiper-controls__current b24-cases__current">01</span>
+                                <div class="swiper-controls__progressbar">
+                                    <div class="swiper-pagination b24-cases__progress"></div>
+                                </div><span class="swiper-controls__total b24-cases__total">03</span>
+                            </div>
+                            <div class="swiper-controls__btns"><button class="swiper-controls__btn b24-cases__prev"
+                                    type="button" aria-label="Предыдущий кейс"><svg width="14" height="23"
+                                        viewBox="0 0 14 23" aria-hidden="true">
+                                        <path
+                                            d="M12.8724 21.9212C13.6702 21.1379 13.6709 19.8527 12.8739 19.0685L6.39138 12.6899C5.59503 11.9064 5.59503 10.6223 6.39138 9.83874L12.8739 3.46018C13.6709 2.676 13.6702 1.39077 12.8724 0.607456L12.8372 0.572971C12.0593 -0.190859 10.8128 -0.190859 10.0349 0.57297L0.599064 9.83722C-0.199363 10.6211 -0.199363 11.9076 0.599064 12.6915L10.0349 21.9557C10.8128 22.7195 12.0593 22.7195 12.8372 21.9557L12.8724 21.9212Z" />
+                                    </svg></button><button class="swiper-controls__btn b24-cases__next" type="button"
+                                    aria-label="Следующий кейс"><svg width="14" height="23" viewBox="0 0 14 23"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M12.8724 21.9212C13.6702 21.1379 13.6709 19.8527 12.8739 19.0685L6.39138 12.6899C5.59503 11.9064 5.59503 10.6223 6.39138 9.83874L12.8739 3.46018C13.6709 2.676 13.6702 1.39077 12.8724 0.607456L12.8372 0.572971C12.0593 -0.190859 10.8128 -0.190859 10.0349 0.57297L0.599064 9.83722C-0.199363 10.6211 -0.199363 11.9076 0.599064 12.6915L10.0349 21.9557C10.8128 22.7195 12.0593 22.7195 12.8372 21.9557L12.8724 21.9212Z" />
+                                    </svg></button></div>
+                        </div>
+                    </div>
+                    <div class="swiper b24-cases__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="b24-case-card">
+                                    <h3 class="b24-case-card__title gradient-color">Компания «СтройМир»</h3>
+                                    <div class="b24-case-card__content">
+                                        <p class="b24-case-card__label">Было:</p>
+                                        <p>Менеджеры тратили до 2 часов на ручной перенос заявок с сайта и распределение
+                                            звонков. Лиды остывали.</p>
+                                        <p class="b24-case-card__label b24-case-card__label--result">Стало:</p>
+                                        <p>Автоматизировали воронку продаж в Битрикс24. Система сама мгновенно назначает
+                                            ответственного, сократив время обработки до 15 минут.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="b24-case-card">
+                                    <h3 class="b24-case-card__title gradient-color">Компания «СтройМир»</h3>
+                                    <div class="b24-case-card__content">
+                                        <p class="b24-case-card__label">Было:</p>
+                                        <p>Менеджеры тратили до 2 часов на ручной перенос заявок с сайта и распределение
+                                            звонков. Лиды остывали.</p>
+                                        <p class="b24-case-card__label b24-case-card__label--result">Стало:</p>
+                                        <p>Автоматизировали воронку продаж в Битрикс24. Система сама мгновенно назначает
+                                            ответственного, сократив время обработки до 15 минут.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="b24-case-card">
+                                    <h3 class="b24-case-card__title gradient-color">Компания «СтройМир»</h3>
+                                    <div class="b24-case-card__content">
+                                        <p class="b24-case-card__label">Было:</p>
+                                        <p>Менеджеры тратили до 2 часов на ручной перенос заявок с сайта и распределение
+                                            звонков. Лиды остывали.</p>
+                                        <p class="b24-case-card__label b24-case-card__label--result">Стало:</p>
+                                        <p>Автоматизировали воронку продаж в Битрикс24. Система сама мгновенно назначает
+                                            ответственного, сократив время обработки до 15 минут.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="b24-case-card">
+                                    <h3 class="b24-case-card__title gradient-color">Компания «СтройМир»</h3>
+                                    <div class="b24-case-card__content">
+                                        <p class="b24-case-card__label">Было:</p>
+                                        <p>Менеджеры тратили до 2 часов на ручной перенос заявок с сайта и распределение
+                                            звонков. Лиды остывали.</p>
+                                        <p class="b24-case-card__label b24-case-card__label--result">Стало:</p>
+                                        <p>Автоматизировали воронку продаж в Битрикс24. Система сама мгновенно назначает
+                                            ответственного, сократив время обработки до 15 минут.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="b24-case-card">
+                                    <h3 class="b24-case-card__title gradient-color">Компания «СтройМир»</h3>
+                                    <div class="b24-case-card__content">
+                                        <p class="b24-case-card__label">Было:</p>
+                                        <p>Менеджеры тратили до 2 часов на ручной перенос заявок с сайта и распределение
+                                            звонков. Лиды остывали.</p>
+                                        <p class="b24-case-card__label b24-case-card__label--result">Стало:</p>
+                                        <p>Автоматизировали воронку продаж в Битрикс24. Система сама мгновенно назначает
+                                            ответственного, сократив время обработки до 15 минут.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Отзывы -->
         <section class="section">
             <div class="container">
@@ -282,18 +520,25 @@
                                 </div>
                                 <div class="swiper-controls__btns">
                                     <div class="swiper-controls__btn swiper-reviews-btn-prev">
-                                        <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.8724 21.9212C13.6702 21.1379 13.6709 19.8527 12.8739 19.0685L6.39138 12.6899C5.59503 11.9064 5.59503 10.6223 6.39138 9.83874L12.8739 3.46018C13.6709 2.676 13.6702 1.39077 12.8724 0.607456L12.8372 0.572971C12.0593 -0.190859 10.8128 -0.190859 10.0349 0.57297L0.599064 9.83722C-0.199363 10.6211 -0.199363 11.9076 0.599064 12.6915L10.0349 21.9557C10.8128 22.7195 12.0593 22.7195 12.8372 21.9557L12.8724 21.9212Z" fill="#848484" />
+                                        <svg width="14" height="23" viewBox="0 0 14 23" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.8724 21.9212C13.6702 21.1379 13.6709 19.8527 12.8739 19.0685L6.39138 12.6899C5.59503 11.9064 5.59503 10.6223 6.39138 9.83874L12.8739 3.46018C13.6709 2.676 13.6702 1.39077 12.8724 0.607456L12.8372 0.572971C12.0593 -0.190859 10.8128 -0.190859 10.0349 0.57297L0.599064 9.83722C-0.199363 10.6211 -0.199363 11.9076 0.599064 12.6915L10.0349 21.9557C10.8128 22.7195 12.0593 22.7195 12.8372 21.9557L12.8724 21.9212Z"
+                                                fill="#848484" />
                                         </svg>
                                     </div>
                                     <div class="swiper-controls__btn swiper-reviews-btn-next">
-                                        <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.598838 0.607576C-0.198978 1.39089 -0.19968 2.67612 0.597281 3.4603L7.07981 9.83887C7.87616 10.6224 7.87616 11.9065 7.07981 12.6901L0.597283 19.0686C-0.199678 19.8528 -0.198978 21.138 0.598838 21.9214L0.633962 21.9558C1.41194 22.7197 2.65835 22.7197 3.43632 21.9558L12.8721 12.6916C13.6706 11.9077 13.6706 10.6212 12.8721 9.83734L3.43632 0.573092C2.65835 -0.190739 1.41194 -0.190739 0.633962 0.573092L0.598838 0.607576Z" fill="url(#paint0_linear_416_2181)" />
+                                        <svg width="14" height="23" viewBox="0 0 14 23" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.598838 0.607576C-0.198978 1.39089 -0.19968 2.67612 0.597281 3.4603L7.07981 9.83887C7.87616 10.6224 7.87616 11.9065 7.07981 12.6901L0.597283 19.0686C-0.199678 19.8528 -0.198978 21.138 0.598838 21.9214L0.633962 21.9558C1.41194 22.7197 2.65835 22.7197 3.43632 21.9558L12.8721 12.6916C13.6706 11.9077 13.6706 10.6212 12.8721 9.83734L3.43632 0.573092C2.65835 -0.190739 1.41194 -0.190739 0.633962 0.573092L0.598838 0.607576Z"
+                                                fill="url(#paint0_linear_416_2181)" />
                                             <defs>
-                                              <linearGradient id="paint0_linear_416_2181" x1="14.3257" y1="11.2645" x2="-0.594545" y2="11.255" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#9566FF" />
-                                                <stop offset="1" stop-color="#48A6FE" />
-                                              </linearGradient>
+                                                <linearGradient id="paint0_linear_416_2181" x1="14.3257" y1="11.2645"
+                                                    x2="-0.594545" y2="11.255" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#9566FF" />
+                                                    <stop offset="1" stop-color="#48A6FE" />
+                                                </linearGradient>
                                             </defs>
                                         </svg>
                                     </div>
@@ -313,8 +558,11 @@
                                             </div>
                                             <div class="review-card__content">
                                                 <p class="review-card__text">
-                                                    Покупали технику у «Комтранс» в 2019 году.  Менеджеры «Комтранса» вели все этапы сделки, с радаров не пропадали, участвовали в сделке максимально. Осталось приятное впечатление о технике и о самой компании.
-                                                </p>   
+                                                    Покупали технику у «Комтранс» в 2019 году. Менеджеры «Комтранса»
+                                                    вели все этапы сделки, с радаров не пропадали, участвовали в сделке
+                                                    максимально. Осталось приятное впечатление о технике и о самой
+                                                    компании.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -326,8 +574,11 @@
                                             </div>
                                             <div class="review-card__content">
                                                 <p class="review-card__text">
-                                                    Покупали технику у «Комтранс» в 2019 году.  Менеджеры «Комтранса» вели все этапы сделки, с радаров не пропадали, участвовали в сделке максимально. Осталось приятное впечатление о технике и о самой компании.
-                                                </p>   
+                                                    Покупали технику у «Комтранс» в 2019 году. Менеджеры «Комтранса»
+                                                    вели все этапы сделки, с радаров не пропадали, участвовали в сделке
+                                                    максимально. Осталось приятное впечатление о технике и о самой
+                                                    компании.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -339,8 +590,11 @@
                                             </div>
                                             <div class="review-card__content">
                                                 <p class="review-card__text">
-                                                    Покупали технику у «Комтранс» в 2019 году.  Менеджеры «Комтранса» вели все этапы сделки, с радаров не пропадали, участвовали в сделке максимально. Осталось приятное впечатление о технике и о самой компании.
-                                                </p>   
+                                                    Покупали технику у «Комтранс» в 2019 году. Менеджеры «Комтранса»
+                                                    вели все этапы сделки, с радаров не пропадали, участвовали в сделке
+                                                    максимально. Осталось приятное впечатление о технике и о самой
+                                                    компании.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -352,8 +606,11 @@
                                             </div>
                                             <div class="review-card__content">
                                                 <p class="review-card__text">
-                                                    Покупали технику у «Комтранс» в 2019 году.  Менеджеры «Комтранса» вели все этапы сделки, с радаров не пропадали, участвовали в сделке максимально. Осталось приятное впечатление о технике и о самой компании.
-                                                </p>   
+                                                    Покупали технику у «Комтранс» в 2019 году. Менеджеры «Комтранса»
+                                                    вели все этапы сделки, с радаров не пропадали, участвовали в сделке
+                                                    максимально. Осталось приятное впечатление о технике и о самой
+                                                    компании.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -364,7 +621,7 @@
                     <ul>
                         <li class="reviews__circle"></li>
                         <li class="reviews__circle"></li>
-                        <li class="reviews__circle"></li> 
+                        <li class="reviews__circle"></li>
                     </ul>
                 </div>
             </div>
@@ -377,21 +634,25 @@
                     <div class="callback__wrapper">
                         <div class="callback__form">
                             <div class="callback__form-title">
-                                <h2 class="gradient-color">Запросите уникальное предложение: что входит, сроки, прогнозы</h2>
+                                <h2 class="gradient-color">Запросите уникальное предложение: что входит, сроки, прогнозы
+                                </h2>
                             </div>
                             <div class="callback__form-form">
                                 <form class="form form-callback">
                                     <div class="form-callback__wrapper">
                                         <label class="form-callback__item form__area">
-                                            <input type="text" class="input" name="name" placeholder="Ваше имя" required>
+                                            <input type="text" class="input" name="name" placeholder="Ваше имя"
+                                                required>
                                             <small class="form__area-error"></small>
                                         </label>
                                         <label class="form-callback__item form__area">
-                                            <input type="text" class="input" name="phone" data-phone placeholder="Номер телефона" required>
+                                            <input type="text" class="input" name="phone" data-phone
+                                                placeholder="Номер телефона" required>
                                             <small class="form__area-error"></small>
                                         </label>
                                         <label class="form-callback__item form__area">
-                                            <input type="email" class="input" name="email" placeholder="E-mail" required>
+                                            <input type="email" class="input" name="email" placeholder="E-mail"
+                                                required>
                                             <small class="form__area-error"></small>
                                         </label>
                                     </div>
@@ -402,7 +663,8 @@
                                         <label class="form-callback__agree">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" checked>
-                                                <span>Я даю согласие на обработку своих <a href="" class="gradient-color">персональных данных</a></span>
+                                                <span>Я даю согласие на обработку своих <a href=""
+                                                        class="gradient-color">персональных данных</a></span>
                                             </label>
                                         </label>
                                     </div>
@@ -419,38 +681,39 @@
     </main>
 
     <!-- Подвал -->
-    <footer class="footer">
+    <footer class="footer footer--home">
         <div class="container">
             <div class="footer__body">
                 <div class="footer__body-top">
-                    <a href="" class="footer__logo">
+                    <a href="/" class="footer__logo">
                         <img src="/assets/img/icons/i-footer-logo.svg" alt="">
                     </a>
                     <ul class="footer__contacts-list">
                         <li class="footer__contacts-list-item">
-                            <a href="" class="footer__contacts-list-link gradient-color" data-phone>+7 917 078 86 26</a>
+                            <a href="tel:+79170788626" class="footer__contacts-list-link gradient-color" data-phone>+7
+                                917 078 86 26</a>
                         </li>
                         <li class="footer__contacts-list-item">
-                            <a href="" class="footer__contacts-list-link gradient-color" data-email>htmedia.info@mail.ru</a>
+                            <a href="mailto:htmedia.info@mail.ru" class="footer__contacts-list-link gradient-color"
+                                data-email>htmedia.info@mail.ru</a>
                         </li>
                     </ul>
                 </div>
-                <div class="footer__body-row">
+                <div class="footer__body-row footer__body-row--navigation">
                     <div class="footer__body-col">
                         <div class="footer__body-col-title">
-                            <h3>Компания</h3>
+                            <h3>Навигация</h3>
                         </div>
                         <div class="footer__body-col-content">
                             <ul class="footer__body-col-list">
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">О компании</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Сертификаты</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Партнеры</a>
-                                </li>
+                                <li class="footer__body-col-item"><a href="/pages/cases.html"
+                                        class="footer__body-col-link">Кейсы</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/about.html"
+                                        class="footer__body-col-link">О компании</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/blog.html"
+                                        class="footer__body-col-link">Блог</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/contacts.html"
+                                        class="footer__body-col-link">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -459,16 +722,21 @@
                             <h3>Услуги</h3>
                         </div>
                         <div class="footer__body-col-content">
-                            <ul class="footer__body-col-list">
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">WEB разработка</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Внедрение Битрикс 24</a>
-                                </li>
-                                <li class="footer__body-col-item">
-                                    <a href="" class="footer__body-col-link">Техническая поддержка</a>
-                                </li>
+                            <ul class="footer__body-col-list footer__body-col-list--services">
+                                <li class="footer__body-col-item"><a href="/pages/service-dev.html"
+                                        class="footer__body-col-link">Разработка сайтов</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-design.html"
+                                        class="footer__body-col-link">Комплексный дизайн</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-b24.html"
+                                        class="footer__body-col-link">Внедрение Битрикс24</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-ai.html"
+                                        class="footer__body-col-link">Интеграция ИИ</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-seo.html"
+                                        class="footer__body-col-link">SEO-продвижение</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-adv.html"
+                                        class="footer__body-col-link">Контекстная реклама</a></li>
+                                <li class="footer__body-col-item"><a href="/pages/service-target.html"
+                                        class="footer__body-col-link">Таргет</a></li>
                             </ul>
                         </div>
                     </div>
@@ -484,23 +752,28 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer__body-row">
-                    <div class="footer__body-col">
-                        <a href="" class="footer__body-col-icon">
-                            <img src="/assets/img/icons/i-org.svg" alt="Ведущая организация ИТ-индустрии Чувашской Республики">
-                        </a>
-                    </div>
-                    <div class="footer__body-col">
-                        <a href="" class="footer__body-col-icon">
-                            <img src="/assets/img/icons/i-it.svg" alt="Аккредитованная ИТ-компания">
-                        </a>
-                    </div>
-                    <div class="footer__body-col footer__body-col-end">
-                        <p class="footer__body-col-text">
-                            Настоящий сайт является официальным сайтом ООО «Хайтек медиа». Компания осуществляет деятельность в области информационных технологий, включена в Реестр аккредитованных ИТ-компаний (№ 65635 от 25.11.2024 г.).
-                        </p>
-                    </div>
+                <div class="footer__badges">
+                    <img class="footer__badge" src="/assets/img/icons/i-it.svg" alt="Аккредитованная ИТ-компания"
+                        loading="lazy" width="224" height="94">
+                    <img class="footer__badge" src="/assets/img/icons/i-org.svg"
+                        alt="Ведущая организация ИТ-индустрии Чувашской Республики" loading="lazy" width="248"
+                        height="94">
+                    <a class="footer__badge-link" href="https://mb21.ru" target="_blank" rel="noopener noreferrer">
+                        <img class="footer__badge" src="/assets/img/icons/partner-apmb.svg"
+                            alt="Партнер АНО «АПМБ» — Мой бизнес, Чувашская Республика" loading="lazy" width="248"
+                            height="94">
+                    </a>
+                    <a class="footer__badge-link" href="https://опорачувашия.рф" target="_blank" rel="noopener noreferrer">
+                        <img class="footer__badge" src="/assets/img/icons/partner-committee.svg"
+                            alt="Опора России — Комитет по информационным технологиям" loading="lazy" width="297"
+                            height="94">
+                    </a>
                 </div>
+                <p class="footer__body-col-text footer__legal">
+                    Настоящий сайт является официальным сайтом ООО «Хайтек медиа». Компания осуществляет деятельность в
+                    области информационных технологий,<br>
+                    включена в Реестр аккредитованных ИТ-компаний (№ 65635 от 25.11.2024 г.).
+                </p>
             </div>
             <div class="footer__bottom">
                 <span class="footer__bottom-copyright">© 2025 ООО «ХАЙТЕК МЕДИА»</span>
@@ -513,7 +786,10 @@
     <script src="/assets/libs/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/script.js?v=b24-1"></script>
+    <script src="/assets/js/home-header.js?v=3"></script>
     <script src="/assets/js/swiper.js"></script>
+    <script src="/assets/js/b24.js"></script>
 </body>
+
 </html>

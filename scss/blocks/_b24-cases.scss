@@ -1,0 +1,16 @@
+.b24-cases {
+    position: relative; isolation: isolate;
+    &::before { content: ''; position: absolute; z-index: -1; left: 10%; bottom: -150px; width: 400px; height: 220px; border-radius: 50%; background: rgba(139,110,255,.2); filter: blur(150px); pointer-events: none; }
+    &__header { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 20px; }
+    &__header .swiper-controls { width: 360px; max-width: 100%; min-width: 0; }
+    &__header .swiper-controls__fraction { flex: 1 1 0; min-width: 0; }
+    &__header .swiper-controls__progressbar { flex: 1 1 0; min-width: 0; }
+    &__slider { padding: 4px 0 10px; }
+    &__slider .swiper-slide { height: auto; }
+    &__next svg { transform: rotate(180deg); }
+    &__header .swiper-controls__btn { transition: opacity .2s ease; }
+    &__header .swiper-controls__btn:not(.swiper-button-disabled):hover { opacity: .6; }
+    &__header .swiper-controls__btn:focus-visible { outline: 2px solid #9566ff; outline-offset: 5px; }
+    @media(max-width: $breakpoint600) { &__header { flex-direction: column; align-items: flex-start; gap: 20px; } }
+    @media (prefers-reduced-motion: reduce) { &__header .swiper-controls__btn { transition: none; } }
+}

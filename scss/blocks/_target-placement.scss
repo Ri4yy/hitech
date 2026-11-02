@@ -1,0 +1,7 @@
+.target-placement { min-height:311px; }
+.target-placement .context-placement__tags { max-width:100%; }
+.target-placement__image { position:absolute; width:207px; height:155px; top:-14px; right:-107px; overflow:hidden; pointer-events:none; }
+.target-placement__image img { position:absolute; max-width:none; width:306.67%; height:272.59%; left:-16.67%; top:-51.85%; }
+.target-placement__image--ok { width:106px; height:177px; top:-45px; right:-25px; transform:rotate(-8deg); clip-path: inset(0 0 0 45%); }
+.target-placement__image--ok img { width:681.48%; height:272.59%; left:-151.02%; top:-51.85%; }
+@media(max-width:600px) { .target-placement { min-height:365px; } .target-placement .context-placement__tags { max-width:100%; } .target-placement__image { opacity:.8; } }

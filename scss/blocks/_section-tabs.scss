@@ -134,3 +134,13 @@
         // }
     }
 }
+@media (max-width: 992px) {
+    .section-tabs__list--services { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; }
+    .section-tabs__list--services li { text-align:center; min-width:0; white-space:normal; }
+    .section-tabs__list--services li:last-child:nth-child(odd) { grid-column:1 / -1; width:calc((100% - 12px) / 2); justify-self:center; }
+    .section-tabs__list--services li a { display:block; font-weight:500; }
+}
+@media (max-width: 600px) {
+    .section-tabs__list--services { grid-template-columns:1fr; }
+    .section-tabs__list--services li:last-child:nth-child(odd) { grid-column:auto; width:100%; }
+}

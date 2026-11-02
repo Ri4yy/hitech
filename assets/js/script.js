@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Остальные блоки: анимации по скроллу
             document.querySelectorAll('.section').forEach((section) => {
+                if (section.id === 'b24-prices' || section.id === 'b24-cases' || section.id === 'ai-services') return;
                 const elements = section.querySelectorAll('h2, h3, .container__inner, .advantages__item, .collaboration__item, .tariffs__item, .why-choose-us__wrapper, .differences__item, .b2b__right-item, .works__item, .seo-indicators__item, .callback__form, .partners__item, .faq__item');
                 if (!elements.length) return;
 

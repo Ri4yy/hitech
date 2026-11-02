@@ -1,0 +1,14 @@
+.context-placements { position:relative; isolation:isolate; }
+.context-placements::before { content:''; position:absolute; z-index:-1; inset:-180px -180px; background:radial-gradient(ellipse 360px 240px at 35% 40%,rgba(72,166,254,.18),transparent 100%),radial-gradient(ellipse 360px 240px at 75% 40%,rgba(149,102,255,.17),transparent 100%); pointer-events:none; }
+.context-placements__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-top:20px; }
+.context-placement { position:relative; overflow:hidden; display:flex; flex-direction:column; min-width:0; min-height:283px; padding:20px; border-radius:20px; background:#ededed; box-shadow:0 4px 10px rgba(0,0,0,.25),0 -3px 5px rgba(255,255,255,.5); }
+.context-placement h3 { position:relative; z-index:1; font-size:24px; line-height:1.4; font-weight:700; }
+.context-placement__tags { position:relative; z-index:1; display:flex; flex-wrap:wrap; align-content:flex-start; gap:8px; max-width:80%; margin-top:20px; }
+.context-placement__tags li { padding:4px 10px; border:1px solid #abafb1; border-radius:24px; font-size:16px; line-height:1.35; letter-spacing:.05em; }
+.context-placement p { position:relative; z-index:1; margin-top:auto; padding-top:30px; font-size:20px; font-weight:600; line-height:1.4; }
+.context-placement__image { position:absolute; pointer-events:none; }
+.context-placement__image--search { width:300px; max-width:none; right:-121px; top:4px; }
+.context-placement__image--network { width:89px; height:174px; right:31px; top:10px; overflow:hidden; }
+.context-placement__image--network img { position:absolute; max-width:none; width:328.65%; height:112.07%; left:-208.46%; top:-12.07%; }
+@media(max-width:900px) { .context-placements__grid { grid-template-columns:1fr; } }
+@media(max-width:600px) { .context-placement { min-height:278px; } .context-placement h3 { font-size:20px; } .context-placement__tags { max-width:80%; } .context-placement__tags li { font-size:14px; } .context-placement p { font-size:16px; } .context-placement__image--search { width:235px; right:-100px; top:35px; } .context-placement__image--network { right:10px; } }
